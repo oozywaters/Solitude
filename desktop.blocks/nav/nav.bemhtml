@@ -1,0 +1,41 @@
+// elem('list')(tag()('ul'));
+
+// block('nav')(
+//   content()(
+//       function() {
+//         return {
+//           elem: 'list',
+//           content: this.ctx.content
+//         }
+//       }
+//     )
+//   )
+
+block('nav')(
+  tag()('ul'),
+  content()(function() {
+    var content = [];
+    this.ctx.items.forEach(function(item) {
+        content.push(
+            {
+              elem: 'item',
+              elemMods: { active: item.active },
+              content: [
+                {
+                  elem: 'link',
+                  attrs: { href: item.url },
+                  content: item.title
+                }
+              ]
+            }
+          );
+      });
+    return content;
+    }),
+  elem('item')(
+    tag()('li')
+    ),
+  elem('link')(
+    tag()('a')
+    )
+);

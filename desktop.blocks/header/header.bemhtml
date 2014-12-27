@@ -1,0 +1,30 @@
+elem('menu')(
+  tag()('nav')
+  // content()({
+  //   block: 'nav',
+  //   elem: 'list',
+  //   content: 'Home'
+  //   })
+  );
+
+elem('slogan')(
+  tag()('h2')
+  );
+
+// block('header').elem('slogan')(
+//   elemMod('color', 'red').content()('Idi v Pizdu!!!')
+//   );
+
+
+// block('header')(
+//   content()(
+//     block('nav')(
+//       tag()('nav')
+//       )
+//     )
+//   )
+
+// block('nav')(
+//   tag()('nav'),
+//   mix()( { block: 'header', elem: 'menu' } )
+//   )

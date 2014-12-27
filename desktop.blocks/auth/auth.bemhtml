@@ -1,0 +1,81 @@
+block('auth')(
+  tag()('form'),
+  attrs()({ method: 'post', action: '#' }),
+  content()(function() {
+    var content = [];
+    content.push(
+      {
+        elem: 'name',
+        content: 'User Login'
+      },
+      {
+        elem: 'label',
+        attrs: { for: 'usernameInputId' },
+        content: 'Username'
+      },
+      {
+        elem: 'input',
+        attrs: { id: 'usernameInputId', type: 'text', name: 'login', placeholder: 'Username' }
+      },
+      {
+        elem: 'label',
+        attrs: { for: 'passwordInputId' },
+        content: 'Password'
+      },
+      {
+        elem: 'input',
+        attrs: { id:'passwordInputId', type: 'text', name: 'login', placeholder: 'Password' }
+      },
+      {
+        elem: 'submit',
+        content: [
+          'Not yet a Member? ',
+          {
+            elem: 'reg',
+            attrs: { href: '#' },
+            content: 'Register Now'
+          },
+          {
+            block: 'btn',
+            mix: { block: 'auth', elem: 'submit-btn' },
+            attrs: { type: 'submit', name: 'submit', value: 'Login' }
+            // content: 'Login'
+          }
+        ]
+      }
+    //   elem: 'name',
+    //   content: this.ctx.name
+    //   });
+    // this.ctx.inputs.forEach(function(input) {
+    //   content.push({
+    //     elem: 'label',
+    //     content: input.label
+    //     },
+    //     {
+    //     elem: 'input',
+    //     attrs: input.attrs
+    //     });
+    //   });
+    // content.push({
+    //   elem: 'regsub'
+      // }
+      );
+    return content;
+    }),
+  elem('name')(
+    tag()('p')
+    ),
+  elem('label')(
+    tag()('label')
+    ),
+  elem('input')(
+    tag()('input')
+    ),
+  elem('reg')(
+    tag()('a')
+    )
+  );
+
+block('btn')(
+  tag()('input')
+  );
