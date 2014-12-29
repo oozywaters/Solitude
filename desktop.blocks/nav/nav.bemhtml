@@ -35,7 +35,8 @@ block('nav')(
   elem('item')(
     tag()('li')
     ),
-  elem('link')(
-    tag()('a')
+  elem('link')(tag()('a')),
+  mod('bottom', true)(
+    elem('link')(mix()({ block: 'mylink' }))
     )
 );

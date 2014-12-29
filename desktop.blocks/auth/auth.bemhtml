@@ -10,28 +10,29 @@ block('auth')(
       },
       {
         elem: 'label',
-        attrs: { for: 'usernameInputId' },
+        attrs: { for: 'auth__username' },
         content: 'Username'
       },
       {
         elem: 'input',
-        attrs: { id: 'usernameInputId', type: 'text', name: 'login', placeholder: 'Username' }
+        attrs: { id: 'auth__username', type: 'text', name: 'login', placeholder: 'Username' }
       },
       {
         elem: 'label',
-        attrs: { for: 'passwordInputId' },
+        attrs: { for: 'auth__pass' },
         content: 'Password'
       },
       {
         elem: 'input',
-        attrs: { id:'passwordInputId', type: 'text', name: 'login', placeholder: 'Password' }
+        attrs: { id: 'auth__pass', type: 'text', name: 'login', placeholder: 'Password' }
       },
       {
         elem: 'submit',
         content: [
           'Not yet a Member? ',
           {
-            elem: 'reg',
+            block: 'mylink',
+            mods: { size: 'large' },
             attrs: { href: '#' },
             content: 'Register Now'
           },

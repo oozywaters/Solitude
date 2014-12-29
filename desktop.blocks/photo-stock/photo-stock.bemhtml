@@ -1,0 +1,60 @@
+block('photo-stock')(
+  content()(function() {
+    var content = [], photolist = [];
+    content.push({
+      elem: 'header',
+      content: this.ctx.header
+      });
+
+    this.ctx.items.forEach(function(item) {
+        photolist.push(
+            {
+              elem: 'item',
+              content: [
+                {
+                  elem: 'item-link',
+                  // block: 'mylink',
+                  mix: { block: 'mylink', mods: { pszoom: true } },
+                  attrs: { href: item.url },
+                  content: [
+                    {
+                      elem: 'item-img',
+                      attrs: { src: item.img }
+                    },
+                    'view large'
+                  ]
+                }
+              ]
+            }
+          );
+      });
+    content.push(
+        {
+          elem: 'list',
+          content: photolist
+        }
+      );
+    return content;
+    }),
+  elem('header')(
+    tag()('h3'),
+    mix()(
+        {
+          block: 'heading3'
+        }
+      )
+    ),
+  elem('list')(
+    tag()('ul')
+    ),
+  elem('item')(
+    tag()('li')
+    ),
+  elem('item-link')(
+    tag()('a')
+    ),
+  elem('item-img')(
+    tag()('img')
+    )
+  );
+

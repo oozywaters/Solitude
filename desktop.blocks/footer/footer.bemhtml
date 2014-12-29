@@ -1,1 +1,30 @@
-block('footer')()
+// elem('designby-link')(
+//   tag()('a'),
+//   mix()({ block: 'mylink' }),
+//   attrs()(function() {
+//     return {
+//       href: this.ctx.url
+//     }
+//     })
+//   );
+
+elem('valid')(
+  content()(function() {
+    var content = [];
+    this.ctx.links.forEach(function(link) {
+        content.push(
+            {
+              elem: 'valid-link',
+              mix: { block: 'btn' },
+              tag: 'a',
+              attrs: { href: '#' },
+              content: [
+                link,
+                '<br>'
+              ]
+            }
+          );
+      });
+    return content;
+    })
+  );

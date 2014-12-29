@@ -1,0 +1,76 @@
+block('qcontact')(
+  tag()('form'),
+  attrs()({ method: 'post', action: '#' }),
+  content()(function() {
+    var content = [];
+    content.push(
+        {
+          elem: 'header',
+          content: 'Quick Contact'
+        },
+        {
+          elem: 'input-group',
+          content: [
+            {
+              elem: 'label',
+              attrs: { for: 'qcontact__name' },
+              content: 'Name'
+            },
+            {
+              elem: 'input',
+              attrs: { id: 'qcontact__name', type: 'text', name: 'name', placeholder: '- enter your name -' }
+            }
+          ]
+        },
+        {
+          elem: 'input-group',
+          content: [
+            {
+              elem: 'label',
+              attrs: { for: 'qcontact__email' },
+              content: 'Email'
+            },
+            {
+              elem: 'input',
+              attrs: { id: 'qcontact__email', type: 'text', name: 'email', placeholder: '- enter your email -' }
+            }
+          ]
+        },
+        {
+          elem: 'input-btns',
+          content: [
+            {
+              elem: 'button',
+              attrs: { type: 'button', name: 'quote', value: 'Need a Quote?' }
+            },
+            {
+              elem: 'button',
+              attrs: { type: 'submit', name: 'submit', value: 'Submit' }
+            }
+          ]
+        }
+      );
+    return content;
+    }),
+    elem('header')(
+      tag()('h3'),
+      mix()(
+          {
+            block: 'heading3'
+          }
+        )
+    ),
+    elem('label')(
+      tag()('label')
+    ),
+    elem('input')(
+      tag()('input')
+    ),
+    elem('button')(
+      tag()('input'),
+      mix()({
+        block: 'btn'
+        })
+      )
+  );
+

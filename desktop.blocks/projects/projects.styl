@@ -1,0 +1,23 @@
+$active_link
+  color #943415
+  font-weight bold
+
+.projects
+  &__header
+    padding-bottom 8px
+  &__item
+    list-style none
+    padding 4px 0px
+    background url(projects__list-sep.gif) repeat-x top left
+    &:first-child
+      background none
+    &_active
+      .projects__link
+        @extends $active_link
+  &__link
+    color #BB9D59
+    text-decoration none
+    padding-left 10px
+    background url(arrow.gif) no-repeat 0px 5px
+    &:hover
+      @extends $active_link

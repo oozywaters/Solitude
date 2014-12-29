@@ -1,0 +1,266 @@
+/* /Users/oozywaters/Sites/project-stub/desktop.blocks/page/page.styl:begin */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+a img {
+  border: none;
+}
+.page {
+  font: 12px Arial;
+  color: #bb9d59;
+  background: url('../templates/bg.png') repeat-x #fffde4;
+}
+.page__top {
+  background: url('../templates/bg__pic.jpg') no-repeat top left;
+  min-width: 1000px;
+  max-width: 1200px;
+  position: relative;
+  height: 452px;
+}
+/* /Users/oozywaters/Sites/project-stub/desktop.blocks/page/page.styl:end */
+/* /Users/oozywaters/Sites/project-stub/desktop.blocks/header/header.styl:begin */
+.header__menu {
+  position: absolute;
+  top: 33px;
+  right: 18px;
+}
+.header__logo {
+  position: absolute;
+  top: 75px;
+  right: 205px;
+}
+.header__auth {
+  position: absolute;
+  top: 149px;
+  right: 10px;
+}
+.header__slogan {
+  font: 28px Georgia;
+  text-align: center;
+  padding: 0px 98px;
+  color: #497f35;
+  position: absolute;
+  bottom: 1px;
+  left: 0px;
+}
+/* /Users/oozywaters/Sites/project-stub/desktop.blocks/header/header.styl:end */
+/* /Users/oozywaters/Sites/project-stub/desktop.blocks/nav/nav.styl:begin */
+.nav {
+  list-style: none;
+  font-weight: bold;
+}
+.nav__item {
+  display: inline-block;
+  padding: 2px 3px 0px 10px;
+  height: 19px;
+  background: url('../templates/menu_active.png') no-repeat 0px -38px;
+}
+.nav__item:first-child {
+  background: none;
+}
+.nav__link {
+  color: #45ada9;
+  padding: 2px 8px 1px 2px;
+  text-decoration: none;
+}
+.nav__item_active:first-child,
+nav__item:first-child:hover {
+  padding-left: 9px;
+  background: url('../templates/menu_active.png') no-repeat -1px -19px !important;
+}
+.nav_top .nav__item_active,
+.nav_top .nav__item:hover {
+  padding-top: 0px;
+  background-position: 0px -19px;
+}
+.nav_top .nav__item_active .nav__link,
+.nav_top .nav__item:hover .nav__link {
+  color: #943415;
+  display: block;
+  height: 16px;
+  background: url('../templates/menu_active.png') no-repeat right 0px;
+}
+.nav_bottom .nav__item {
+  background: url('../templates/nav_bottom_sep.gif') no-repeat 0px 2px;
+  padding: 0px 7px;
+}
+.nav_bottom .nav__item:first-child {
+  background: none;
+}
+.nav_bottom .nav__item .nav__link {
+  color: #943415;
+  padding: 0;
+}
+.nav_bottom .nav__item .nav__link:hover {
+  text-decoration: underline;
+}
+/* /Users/oozywaters/Sites/project-stub/desktop.blocks/nav/nav.styl:end */
+/* /Users/oozywaters/Sites/project-stub/desktop.blocks/logo/logo.styl:begin */
+.logo {
+  color: #26606d;
+  width: 220px;
+  height: 44px;
+  background: url('../templates/logo.png') no-repeat;
+  position: absolute;
+  top: 75px;
+  right: 205px;
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+/* /Users/oozywaters/Sites/project-stub/desktop.blocks/logo/logo.styl:end */
+/* /Users/oozywaters/Sites/project-stub/desktop.blocks/auth/auth.styl:begin */
+.auth__name {
+  font: 27px Georgia;
+  color: #497f35;
+  padding-bottom: 11px;
+}
+.auth__label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.auth__input {
+  border: 0;
+  color: #bb9d59;
+  font-size: 10px;
+  background-color: #f9f6d4;
+  width: 161px;
+  height: 17px;
+  padding: 0px 10px;
+  margin-right: 25px;
+}
+.auth__submit {
+  font-size: 16px;
+  color: #ab8e4e;
+  padding-top: 15px;
+}
+.auth__submit-btn {
+  width: 60px;
+  height: 20px;
+  position: relative;
+  left: 16px;
+  top: -2px;
+}
+.auth__reg {
+  color: #943415;
+  text-decoration: none;
+}
+.auth__reg:hover {
+  text-decoration: underline;
+}
+/* /Users/oozywaters/Sites/project-stub/desktop.blocks/auth/auth.styl:end */
+/* /Users/oozywaters/Sites/project-stub/desktop.blocks/btn/btn.styl:begin */
+.btn {
+  color: #943415;
+  font-size: 11px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background: #fff;
+  background: -webkit-linear-gradient(bottom, #fff 0%, #ededed 49%, #f3f3f3 50%, #fff 100%);
+  background: linear-gradient(to top, #fff 0%, #ededed 49%, #f3f3f3 50%, #fff 100%);
+}
+/* /Users/oozywaters/Sites/project-stub/desktop.blocks/btn/btn.styl:end */
+/* /Users/oozywaters/Sites/project-stub/desktop.blocks/footer/footer.styl:begin */
+.footer {
+  height: 104px;
+  padding-top: 31px;
+  text-align: center;
+  min-width: 1000px;
+  max-width: 1200px;
+  position: relative;
+  background: url('../templates/footer_line.png') no-repeat top center;
+}
+/* /Users/oozywaters/Sites/project-stub/desktop.blocks/footer/footer.styl:end */

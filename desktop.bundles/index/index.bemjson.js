@@ -1,6 +1,6 @@
 ({
     block: 'page',
-    title: 'Title of the page',
+    title: 'Solitude',
     favicon: '/favicon.ico',
     head: [
         { elem: 'meta', attrs: { name: 'description', content: '' } },
@@ -73,18 +73,79 @@
         },
         {
             block: 'content',
-            content: 'Content goes here'
+            content: [
+                {
+                    block: 'sidebar',
+                    content: [
+                        {
+                            block: 'photo-stock',
+                            header: 'Photo Stock',
+                            items: [
+                                {
+                                    url: '#',
+                                    img: 'http://placehold.it/256x62'
+                                },
+                                {
+                                    url: '#',
+                                    img: 'http://placehold.it/256x62'
+                                },
+                                {
+                                    url: '#',
+                                    img: 'http://placehold.it/256x62'
+                                }
+                            ]
+                        },
+                        {
+                            block: 'qcontact'
+                        },
+                        {
+                            block: 'projects',
+                            items: [
+                                {
+                                    title: 'Lorem ipsum dolor sit amet eros consequat',
+                                    active: true,
+                                    url: '#'
+                                },
+                                {
+                                    title: 'Cras eros massa blandit',
+                                    url: '#'
+                                },
+                                {
+                                    title: 'Etiam quis est ut diam viverra rhoncus',
+                                    url: '#'
+                                },
+                                {
+                                    title: 'Fusce eros consequat',
+                                    url: '#'
+                                },
+                                {
+                                    title: 'Cras eros massa blandit',
+                                    // active: true,
+                                    url: '#'
+                                },
+                                {
+                                    title: 'Aoreet utdiam viverra',
+                                    url: '#'
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             block: 'footer',
             content: [
                 {
                     block: 'nav',
+                    mods: { bottom: true },
                     mix: { block: 'footer', elem: 'menu' },
+                    // mix: { block: 'header', elem: 'menu' },
                     items: [
                         {
                             title: 'Home',
-                            url: '#'
+                            url: '#',
+                            active: 'true'
                         },
                         {
                             title: 'About Us',
@@ -106,6 +167,28 @@
                             title: 'Contact Us',
                             url: '#'
                         }
+                    ]
+                },
+                {
+                    elem: 'copyright',
+                    content: '&copy; Copyright information goes here. All rights reserverd'
+                },
+                {
+                    elem: 'designby',
+                    content: [
+                        'Design by : ',
+                        {
+                            block: 'mylink',
+                            attrs: { href: 'http://templateworld.com' },
+                            content: 'Templateworld'
+                        }
+                    ]
+                },
+                {
+                    elem: 'valid',
+                    links: [
+                        'xhtml',
+                        'css'
                     ]
                 }
             ]
