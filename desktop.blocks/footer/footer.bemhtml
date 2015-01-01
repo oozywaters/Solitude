@@ -7,8 +7,9 @@
 //     }
 //     })
 //   );
-
-elem('valid')(
+block('footer')(
+  tag()('footer'),
+  elem('valid')(
   content()(function() {
     var content = [];
     this.ctx.links.forEach(function(link) {
@@ -27,4 +28,5 @@ elem('valid')(
       });
     return content;
     })
+  )
   );

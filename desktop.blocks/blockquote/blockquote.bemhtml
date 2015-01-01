@@ -1,0 +1,33 @@
+block('blockquote')(
+  content()(function() {
+    var content = [];
+    content.push(
+        {
+          elem: 'content',
+          content: this.ctx.content
+        },
+        {
+          block: 'content-menu',
+          mods: { blockquote: true },
+          items: [
+            {
+              type: 'author',
+              content: this.ctx.author
+            },
+            // {
+            //   type: 'more',
+            //   content: 'About'
+            // }
+          ]
+        }
+      );
+    // content.push(
+    //     {
+    //       block: 'content-menu',
+    //       content: 'HELLO'
+    //     }
+    //   );
+    // content.push('HELLO');
+    return content;
+    })
+  )

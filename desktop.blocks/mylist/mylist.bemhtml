@@ -1,0 +1,62 @@
+block('mylist')(
+  content()(function() {
+    var content = [];
+    var projectlist = [];
+    content.push(
+        {
+          elem: 'header',
+          content: this.ctx.header
+        }
+      );
+    this.ctx.items.forEach(function(item) {
+      var tag = 'a',
+          attrs = { href: item.url },
+          mods = null;
+      if(item.active === true) {
+        tag = 'span';
+        attrs = null;
+        mods = { active: true };
+      }
+      projectlist.push(
+          {
+            elem: 'item',
+            elemMods: mods,
+            content: [
+              {
+                elem: 'link',
+                tag: tag,
+                attrs: attrs,
+                content: item.title
+              }
+            ]
+          }
+        );
+      });
+    content.push(
+        {
+          elem: 'list',
+          content: projectlist
+        }
+      );
+    return content;
+    }),
+    elem('header')(
+      tag()('h3'),
+      mix()(
+          {
+            block: 'heading',
+            mods: { size: 'h3' }
+          }
+        )
+    ),
+    elem('list')(tag()('ul')),
+    elem('item')(tag()('li'))
+  );
+
+block('mylist').mod('services', true)(
+  elem('header')(
+    tag()('h2')
+    )
+  );
+
+// elem('link')(tag()('a'));

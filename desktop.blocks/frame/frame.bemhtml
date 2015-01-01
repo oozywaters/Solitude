@@ -1,0 +1,27 @@
+block('frame')(
+  content()(function() {
+    var content = [];
+
+    content.push(
+        {
+          elem: 'label',
+          mix: { block: 'mylink', mods: { services: true } },
+          attrs: { href: this.ctx.url },
+          content: [
+              {
+                elem: 'img',
+                attrs: { src: this.ctx.img }
+              },
+              this.ctx.label
+          ]
+        }
+      );
+    return content;
+    }),
+  elem('label')(
+    tag()('a')
+    ),
+  elem('img')(
+    tag()('img')
+    )
+  )

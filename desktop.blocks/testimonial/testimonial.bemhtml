@@ -1,0 +1,22 @@
+block('testimonial')(
+  content()(function() {
+    var content = [];
+    content.push(
+        {
+          elem: 'header',
+          content: 'Testimonial'
+        },
+        this.ctx.content
+      );
+    return content;
+    }),
+  elem('header')(
+    tag()('h3'),
+    mix()(
+        {
+          block: 'heading',
+          mods: { size: 'h3' }
+        }
+      )
+    )
+  )

@@ -1,0 +1,62 @@
+block('services')(
+  content()(function() {
+    var content = [];
+    content.push(
+        {
+          elem: 'header',
+          content: this.ctx.title
+        }
+      );
+    content.push(this.ctx.content);
+    return content;
+    }),
+  elem('header')(
+    tag()('h3'),
+    mix()({
+      block: 'heading',
+      mods: { size: 'h3-2' }
+      })
+    ),
+  elem('dlist')(
+    content()(function() {
+      var content = [];
+      var list_items = [];
+      this.ctx.content.forEach(function(item) {
+        list_items.push(
+            {
+              elem: 'dlist-desc',
+              content: [
+                {
+                  elem: 'dlist-link',
+                  attrs: { href: '#' },
+                  content: [
+                    {
+                      block: 'icon',
+                      mods: { pen: true},
+                    },
+                    item
+                  ]
+                }
+              ]
+            }
+          );
+        });
+      content.push(
+            {
+              elem: 'dlist-term',
+              content: 'Services'
+            },
+            list_items
+        );
+      // content.push(this.ctx.content);
+      return content;
+      })
+    ),
+  elem('dlist')(tag()('dl')),
+  elem('dlist-term')(tag()('dt')),
+  elem('dlist-desc')(tag()('dd')),
+  elem('dlist-link')(
+    tag()('a'),
+    mix()({ block: 'mylink' })
+    )
+  );

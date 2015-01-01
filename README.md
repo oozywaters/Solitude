@@ -11,7 +11,7 @@
 
  $ npm i
 
- $ ./node_modules/.bin/bem server
+ $ ./node_modules/.bin/enb server
 
 ```
 Страница `index` доступна по адресу http://localhost:8080/desktop.bundles/index/index.html

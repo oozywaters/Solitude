@@ -1,0 +1,87 @@
+block('article')(
+  elem('title')(
+    mix()({
+      block: 'heading',
+      mods: { size: 'h1' }
+      })
+    ),
+  content()(function() {
+    var content = [];
+    var article_data = [];
+    var menu_items = [];
+    // this.ctx.data.forEach(function(item) {
+    //     article_data.push(
+    //         {
+    //           elem: 'header',
+    //           content: item.header
+    //         },
+    //         {
+    //           elem: 'text',
+    //           content: item.text
+    //         }
+    //       );
+    //   });
+    // article_data.push('HELLO');
+    if(this.ctx.date) menu_items.push({ type: 'date', content: this.ctx.date });
+    if(this.ctx.author) menu_items.push({ type: 'author', content: this.ctx.author });
+    menu_items.push({ type: 'more', content: 'Read More' });
+    content.push(
+        {
+          elem: 'title',
+          content: this.ctx.title
+        },
+        this.ctx.content,
+        {
+          block: 'content-menu',
+          mix: {
+            block: this.ctx.block,
+            elem: 'menu'
+          },
+          items: menu_items
+          // content: [
+          //   {
+          //     elem: 'date',
+          //     content: [
+          //       {
+          //         block: 'icon',
+          //         mods: { cal: true }
+          //       },
+          //       this.ctx.date
+          //     ]
+          //   },
+          //   {
+          //     elem: 'readmore',
+          //     attrs: { href: '#' },
+          //     content: [
+          //       'Read More',
+          //       {
+          //         block: 'icon',
+          //         mods: { pen: true }
+          //       }
+          //     ]
+          //   }
+          // ]
+        }
+      );
+    // content.push(article_data);
+    return content;
+    }),
+  // elem('menu')(
+  //   mix()(
+  //       {
+  //         block: 'content-menu'
+  //       }
+  //     )
+  //   ),
+  elem('date')(
+    tag()('p')
+    ),
+  elem('readmore')(
+    tag()('a'),
+    mix()(
+        {
+          block: 'mylink'
+        }
+      )
+    )
+  );

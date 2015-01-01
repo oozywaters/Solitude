@@ -1,14 +1,16 @@
-elem('menu')(
-  tag()('nav')
-  // content()({
-  //   block: 'nav',
-  //   elem: 'list',
-  //   content: 'Home'
-  //   })
-  );
-
-elem('slogan')(
-  tag()('h2')
+block('header')(
+  tag()('header'),
+  elem('menu')(
+    tag()('nav')
+    // content()({
+    //   block: 'nav',
+    //   elem: 'list',
+    //   content: 'Home'
+    //   })
+  ),
+  elem('slogan')(
+    tag()('h2')
+    )
   );
 
 // block('header').elem('slogan')(

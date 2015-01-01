@@ -40,7 +40,8 @@ block('photo-stock')(
     tag()('h3'),
     mix()(
         {
-          block: 'heading3'
+          block: 'heading',
+          mods: { size: 'h3' }
         }
       )
     ),
