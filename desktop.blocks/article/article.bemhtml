@@ -32,10 +32,10 @@ block('article')(
         },
         this.ctx.content,
         {
-          block: 'content-menu',
+          block: 'content-info',
           mix: {
             block: this.ctx.block,
-            elem: 'menu'
+            elem: 'info'
           },
           items: menu_items
           // content: [

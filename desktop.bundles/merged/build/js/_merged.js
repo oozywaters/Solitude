@@ -435,61 +435,121 @@ exports.apply = apply;
 
 function applyc(__$ctx, __$ref) {
     var __$t = $$mode;
-    if (__$t === "tag") {
+    if (__$t === "content") {
         var __$r = __$g0(__$ctx, __$ref);
         if (__$r !== __$ref) return __$r;
-    } else if (__$t === "content") {
+    } else if (__$t === "tag") {
+        var __$mr = __$m1[$$block];
+        if (__$mr) {
+            __$mr = __$mr(__$ctx, __$ref);
+            if (__$mr !== __$ref) return __$mr;
+        }
+        return undefined;
+    } else if (__$t === "mix") {
         var __$t = $$block;
-        if (__$t === "auth") {
-            if (!$$elem) {
-                var __$r = __$b22(__$ctx, __$ref);
-                if (__$r !== __$ref) return __$r;
+        if (__$t === "qcontact") {
+            var __$t = $$elem;
+            if (__$t === "button") {
+                return {
+                    block: "btn"
+                };
+            } else if (__$t === "header") {
+                return {
+                    block: "heading",
+                    mods: {
+                        size: "h3"
+                    }
+                };
+            }
+        } else if (__$t === "photo-stock") {
+            if ($$elem === "header") {
+                return {
+                    block: "heading",
+                    mods: {
+                        size: "h3"
+                    }
+                };
+            }
+        } else if (__$t === "testimonial") {
+            if ($$elem === "header") {
+                return {
+                    block: "heading",
+                    mods: {
+                        size: "h3"
+                    }
+                };
+            }
+        } else if (__$t === "mylist") {
+            if ($$elem === "header") {
+                return {
+                    block: "heading",
+                    mods: {
+                        size: "h3"
+                    }
+                };
+            }
+        } else if (__$t === "services") {
+            var __$t = $$elem;
+            if (__$t === "header") {
+                return {
+                    block: "heading",
+                    mods: {
+                        size: "h3-2"
+                    }
+                };
+            } else if (__$t === "dlist-link") {
+                return {
+                    block: "mylink"
+                };
+            }
+        } else if (__$t === "article") {
+            var __$t = $$elem;
+            if (__$t === "readmore") {
+                return {
+                    block: "mylink"
+                };
+            } else if (__$t === "title") {
+                return {
+                    block: "heading",
+                    mods: {
+                        size: "h1"
+                    }
+                };
             }
         } else if (__$t === "nav") {
-            if (!$$elem) {
-                var __$r = __$b23(__$ctx, __$ref);
-                if (__$r !== __$ref) return __$r;
-            }
-        } else if (__$t === "page") {
-            if ($$elem === "head" && (__$ctx.__$a0 & 2) === 0) {
-                return [ __$ctx.ctx["x-ua-compatible"] === false ? false : {
-                    tag: "meta",
-                    attrs: {
-                        "http-equiv": "X-UA-Compatible",
-                        content: __$ctx.ctx["x-ua-compatible"] || "IE=edge"
-                    }
-                }, function __$lb__$18() {
-                    var __$r__$19;
-                    var __$l0__$20 = __$ctx.__$a0;
-                    __$ctx.__$a0 = __$ctx.__$a0 | 2;
-                    __$r__$19 = applyc(__$ctx, __$ref);
-                    __$ctx.__$a0 = __$l0__$20;
-                    return __$r__$19;
-                }() ];
-            }
-            if (!$$elem && (__$ctx.__$a0 & 4) === 0) {
-                return [ function __$lb__$21() {
-                    var __$r__$22;
-                    var __$l0__$23 = __$ctx.__$a0;
-                    __$ctx.__$a0 = __$ctx.__$a0 | 4;
-                    __$r__$22 = applyc(__$ctx, __$ref);
-                    __$ctx.__$a0 = __$l0__$23;
-                    return __$r__$22;
-                }(), __$ctx.ctx.scripts ];
-            }
-        } else if (__$t === "ua") {
-            if (!$$elem) {
-                return [ "(function(e,c){", 'e[c]=e[c].replace(/(ua_js_)no/g,"$1yes");', '})(document.documentElement,"className");' ];
+            if ($$elem === "link" && $$mods && $$mods["bottom"] === true) {
+                return {
+                    block: "mylink"
+                };
             }
         }
-        return __$ctx.ctx.content;
+        return undefined;
     } else if (__$t === "attrs") {
         var __$t = $$block;
-        if (__$t === "auth") {
+        if (__$t === "qcontact") {
             if (!$$elem) {
                 return {
                     method: "post",
                     action: "#"
+                };
+            }
+        } else if (__$t === "icon") {
+            if (!$$elem && __$ctx.ctx.url) {
+                return {
+                    style: "background-image:url(" + __$ctx.ctx.url + ")"
+                };
+            }
+        } else if (__$t === "auth") {
+            if (!$$elem) {
+                return {
+                    method: "post",
+                    action: "#"
+                };
+            }
+        } else if (__$t === "mylink") {
+            if (!$$elem) {
+                return {
+                    href: "#"
                 };
             }
         } else if (__$t === "page") {
@@ -550,49 +610,41 @@ function applyc(__$ctx, __$ref) {
                     var __$t = __$ctx.ctx.hasOwnProperty("ie");
                     if (__$t) {
                         if (__$ctx.ctx.ie === true && (__$ctx.__$a0 & 1) === 0) {
-                            var __$r = __$b42(__$ctx, __$ref);
+                            var __$r = __$b50(__$ctx, __$ref);
                             if (__$r !== __$ref) return __$r;
                         }
-                        var __$r = __$b43(__$ctx, __$ref);
+                        var __$r = __$b51(__$ctx, __$ref);
                         if (__$r !== __$ref) return __$r;
                     }
                 }
             }
             if (!$$elem && !__$ctx._defPageApplied && (__$ctx.__$a0 & 8) === 0) {
-                var __$r = __$b44(__$ctx, __$ref);
+                var __$r = __$b52(__$ctx, __$ref);
                 if (__$r !== __$ref) return __$r;
             }
         }
-        var __$r = __$b45(__$ctx, __$ref);
+        var __$r = __$b53(__$ctx, __$ref);
         if (__$r !== __$ref) return __$r;
-    } else if (__$t === "mix") {
-        if ($$block === "header" && !$$elem) {
-            return {
-                block: "page",
-                elem: "top"
-            };
-        }
-        return undefined;
     } else if (__$t === "cls") {
         return undefined;
     } else if (__$t === "") {
         if (__$ctx.ctx && __$ctx.ctx._vow && (__$ctx.__$a0 & 16) === 0) {
-            var __$r = __$b49(__$ctx, __$ref);
+            var __$r = __$b55(__$ctx, __$ref);
             if (__$r !== __$ref) return __$r;
         }
         if (__$ctx.isSimple(__$ctx.ctx)) {
-            var __$r = __$b50(__$ctx, __$ref);
+            var __$r = __$b56(__$ctx, __$ref);
             if (__$r !== __$ref) return __$r;
         }
         if (!__$ctx.ctx) {
-            var __$r = __$b51(__$ctx, __$ref);
+            var __$r = __$b57(__$ctx, __$ref);
             if (__$r !== __$ref) return __$r;
         }
         if (__$ctx.isArray(__$ctx.ctx)) {
-            var __$r = __$b52(__$ctx, __$ref);
+            var __$r = __$b58(__$ctx, __$ref);
             if (__$r !== __$ref) return __$r;
         }
-        var __$r = __$b53(__$ctx, __$ref);
+        var __$r = __$b59(__$ctx, __$ref);
         if (__$r !== __$ref) return __$r;
     }
 }
@@ -789,439 +841,162 @@ function applyc(__$ctx, __$ref) {
     }
 });
 
-function __$b22(__$ctx, __$ref) {
-    var content__$0 = [];
-    content__$0.push({
-        elem: "name",
-        content: "User Login"
-    }, {
-        elem: "label",
-        attrs: {
-            "for": "usernameInputId"
-        },
-        content: "Username"
-    }, {
-        elem: "input",
-        attrs: {
-            id: "usernameInputId",
-            type: "text",
-            name: "login",
-            placeholder: "Username"
-        }
-    }, {
-        elem: "label",
-        attrs: {
-            "for": "passwordInputId"
-        },
-        content: "Password"
-    }, {
-        elem: "input",
-        attrs: {
-            id: "passwordInputId",
-            type: "text",
-            name: "login",
-            placeholder: "Password"
-        }
-    }, {
-        elem: "submit",
-        content: [ "Not yet a Member? ", {
-            elem: "reg",
-            attrs: {
-                href: "#"
-            },
-            content: "Register Now"
-        }, {
-            block: "btn",
-            mix: {
-                block: "auth",
-                elem: "submit-btn"
-            },
-            attrs: {
-                type: "submit",
-                name: "submit",
-                value: "Login"
-            }
-        } ]
-    });
-    return content__$0;
-}
-
-function __$b23(__$ctx, __$ref) {
-    var content__$1 = [];
-    __$ctx.ctx.items.forEach(function(item) {
-        content__$1.push({
-            elem: "item",
-            elemMods: {
-                active: item.active
-            },
-            content: [ {
-                elem: "link",
-                attrs: {
-                    href: item.url
-                },
-                content: item.title
-            } ]
-        });
-    });
-    return content__$1;
-}
-
-function __$b42(__$ctx, __$ref) {
-    var url__$2 = __$ctx.ctx.url;
-    var __$r__$4;
-    var __$l0__$5 = $$mode;
-    $$mode = "";
-    var __$l1__$6 = __$ctx.ctx;
-    __$ctx.ctx = [ 6, 7, 8, 9 ].map(function(v) {
-        return {
-            elem: "css",
-            url: url__$2 + ".ie" + v + ".css",
-            ie: "IE " + v
-        };
-    });
-    var __$r__$8;
-    var __$l2__$9 = __$ctx.__$a0;
-    __$ctx.__$a0 = __$ctx.__$a0 | 1;
-    __$r__$8 = applyc(__$ctx, __$ref);
-    __$ctx.__$a0 = __$l2__$9;
-    __$r__$4 = __$r__$8;
-    $$mode = __$l0__$5;
-    __$ctx.ctx = __$l1__$6;
-    return;
-}
-
-function __$b43(__$ctx, __$ref) {
-    var ie__$10 = __$ctx.ctx.ie, hideRule__$11 = !ie__$10 ? [ "gt IE 9", "<!-->", "<!--" ] : ie__$10 === "!IE" ? [ ie__$10, "<!-->", "<!--" ] : [ ie__$10, "", "" ];
-    var __$r__$13;
-    var __$l0__$14 = $$mode;
-    $$mode = "";
-    var __$l3__$15 = __$ctx.ctx;
-    var __$l1__$16 = __$l3__$15._ieCommented;
-    __$l3__$15._ieCommented = true;
-    var __$l2__$17 = __$ctx.ctx;
-    __$ctx.ctx = [ "<!--[if " + hideRule__$11[0] + "]>" + hideRule__$11[1], __$ctx.ctx, hideRule__$11[2] + "<![endif]-->" ];
-    __$r__$13 = applyc(__$ctx, __$ref);
-    $$mode = __$l0__$14;
-    __$l3__$15._ieCommented = __$l1__$16;
-    __$ctx.ctx = __$l2__$17;
-    return;
-}
-
-function __$b44(__$ctx, __$ref) {
-    __$ctx._defPageApplied = true;
-    var ctx__$24 = __$ctx.ctx;
-    var __$r__$26;
-    var __$l0__$27 = $$mode;
-    $$mode = "";
-    var __$l1__$28 = __$ctx.ctx;
-    __$ctx.ctx = [ ctx__$24.doctype || "<!DOCTYPE html>", {
-        tag: "html",
-        cls: "ua_js_no",
-        content: [ {
-            elem: "head",
-            content: [ {
-                tag: "meta",
-                attrs: {
-                    charset: "utf-8"
-                }
-            }, {
-                tag: "title",
-                content: ctx__$24.title
-            }, {
-                block: "ua"
-            }, ctx__$24.head, ctx__$24.styles, ctx__$24.favicon ? {
-                elem: "favicon",
-                url: ctx__$24.favicon
-            } : "" ]
-        }, ctx__$24 ]
-    } ];
-    var __$r__$30;
-    var __$l2__$31 = __$ctx.__$a0;
-    __$ctx.__$a0 = __$ctx.__$a0 | 8;
-    __$r__$30 = applyc(__$ctx, __$ref);
-    __$ctx.__$a0 = __$l2__$31;
-    __$r__$26 = __$r__$30;
-    $$mode = __$l0__$27;
-    __$ctx.ctx = __$l1__$28;
-    __$ctx._defPageApplied = false;
-    return;
-}
-
-function __$b45(__$ctx, __$ref) {
-    var _this__$32 = __$ctx, BEM_INTERNAL__$33 = _this__$32.BEM.INTERNAL, ctx__$34 = __$ctx.ctx, isBEM__$35, tag__$36, res__$37;
-    var __$r__$39;
-    var __$l0__$40 = __$ctx._str;
-    __$ctx._str = "";
-    var vBlock__$41 = $$block;
-    var __$r__$43;
-    var __$l1__$44 = $$mode;
-    $$mode = "tag";
-    __$r__$43 = applyc(__$ctx, __$ref);
-    $$mode = __$l1__$44;
-    tag__$36 = __$r__$43;
-    typeof tag__$36 !== "undefined" || (tag__$36 = ctx__$34.tag);
-    typeof tag__$36 !== "undefined" || (tag__$36 = "div");
-    if (tag__$36) {
-        var jsParams__$45, js__$46;
-        if (vBlock__$41 && ctx__$34.js !== false) {
-            var __$r__$47;
-            var __$l2__$48 = $$mode;
-            $$mode = "js";
-            __$r__$47 = applyc(__$ctx, __$ref);
-            $$mode = __$l2__$48;
-            js__$46 = __$r__$47;
-            js__$46 = js__$46 ? __$ctx.extend(ctx__$34.js, js__$46 === true ? {} : js__$46) : ctx__$34.js === true ? {} : ctx__$34.js;
-            js__$46 && ((jsParams__$45 = {})[BEM_INTERNAL__$33.buildClass(vBlock__$41, ctx__$34.elem)] = js__$46);
-        }
-        __$ctx._str += "<" + tag__$36;
-        var __$r__$49;
-        var __$l3__$50 = $$mode;
-        $$mode = "bem";
-        __$r__$49 = applyc(__$ctx, __$ref);
-        $$mode = __$l3__$50;
-        isBEM__$35 = __$r__$49;
-        typeof isBEM__$35 !== "undefined" || (isBEM__$35 = typeof ctx__$34.bem !== "undefined" ? ctx__$34.bem : ctx__$34.block || ctx__$34.elem);
-        var __$r__$52;
-        var __$l4__$53 = $$mode;
-        $$mode = "cls";
-        __$r__$52 = applyc(__$ctx, __$ref);
-        $$mode = __$l4__$53;
-        var cls__$51 = __$r__$52;
-        cls__$51 || (cls__$51 = ctx__$34.cls);
-        var addJSInitClass__$54 = ctx__$34.block && jsParams__$45;
-        if (isBEM__$35 || cls__$51) {
-            __$ctx._str += ' class="';
-            if (isBEM__$35) {
-                __$ctx._str += BEM_INTERNAL__$33.buildClasses(vBlock__$41, ctx__$34.elem, ctx__$34.elemMods || ctx__$34.mods);
-                var __$r__$56;
-                var __$l5__$57 = $$mode;
-                $$mode = "mix";
-                __$r__$56 = applyc(__$ctx, __$ref);
-                $$mode = __$l5__$57;
-                var mix__$55 = __$r__$56;
-                ctx__$34.mix && (mix__$55 = mix__$55 ? [].concat(mix__$55, ctx__$34.mix) : ctx__$34.mix);
-                if (mix__$55) {
-                    var visited__$58 = {}, visitedKey__$59 = function(block, elem) {
-                        return (block || "") + "__" + (elem || "");
-                    };
-                    visited__$58[visitedKey__$59(vBlock__$41, $$elem)] = true;
-                    __$ctx.isArray(mix__$55) || (mix__$55 = [ mix__$55 ]);
-                    for (var i__$60 = 0; i__$60 < mix__$55.length; i__$60++) {
-                        var mixItem__$61 = mix__$55[i__$60], hasItem__$62 = mixItem__$61.block || mixItem__$61.elem, mixBlock__$63 = mixItem__$61.block || mixItem__$61._block || _this__$32.block, mixElem__$64 = mixItem__$61.elem || mixItem__$61._elem || _this__$32.elem;
-                        hasItem__$62 && (__$ctx._str += " ");
-                        __$ctx._str += BEM_INTERNAL__$33[hasItem__$62 ? "buildClasses" : "buildModsClasses"](mixBlock__$63, mixItem__$61.elem || mixItem__$61._elem || (mixItem__$61.block ? undefined : _this__$32.elem), mixItem__$61.elemMods || mixItem__$61.mods);
-                        if (mixItem__$61.js) {
-                            (jsParams__$45 || (jsParams__$45 = {}))[BEM_INTERNAL__$33.buildClass(mixBlock__$63, mixItem__$61.elem)] = mixItem__$61.js === true ? {} : mixItem__$61.js;
-                            addJSInitClass__$54 || (addJSInitClass__$54 = mixBlock__$63 && !mixItem__$61.elem);
-                        }
-                        if (hasItem__$62 && !visited__$58[visitedKey__$59(mixBlock__$63, mixElem__$64)]) {
-                            visited__$58[visitedKey__$59(mixBlock__$63, mixElem__$64)] = true;
-                            var __$r__$66;
-                            var __$l6__$67 = $$mode;
-                            $$mode = "mix";
-                            var __$l7__$68 = $$block;
-                            $$block = mixBlock__$63;
-                            var __$l8__$69 = $$elem;
-                            $$elem = mixElem__$64;
-                            __$r__$66 = applyc(__$ctx, __$ref);
-                            $$mode = __$l6__$67;
-                            $$block = __$l7__$68;
-                            $$elem = __$l8__$69;
-                            var nestedMix__$65 = __$r__$66;
-                            if (nestedMix__$65) {
-                                for (var j__$70 = 0; j__$70 < nestedMix__$65.length; j__$70++) {
-                                    var nestedItem__$71 = nestedMix__$65[j__$70];
-                                    if (!nestedItem__$71.block && !nestedItem__$71.elem || !visited__$58[visitedKey__$59(nestedItem__$71.block, nestedItem__$71.elem)]) {
-                                        nestedItem__$71._block = mixBlock__$63;
-                                        nestedItem__$71._elem = mixElem__$64;
-                                        mix__$55.splice(i__$60 + 1, 0, nestedItem__$71);
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            cls__$51 && (__$ctx._str += isBEM__$35 ? " " + cls__$51 : cls__$51);
-            __$ctx._str += addJSInitClass__$54 ? ' i-bem"' : '"';
-        }
-        if (isBEM__$35 && jsParams__$45) {
-            __$ctx._str += ' data-bem="' + __$ctx.attrEscape(JSON.stringify(jsParams__$45)) + '"';
-        }
-        var __$r__$73;
-        var __$l9__$74 = $$mode;
-        $$mode = "attrs";
-        __$r__$73 = applyc(__$ctx, __$ref);
-        $$mode = __$l9__$74;
-        var attrs__$72 = __$r__$73;
-        attrs__$72 = __$ctx.extend(attrs__$72, ctx__$34.attrs);
-        if (attrs__$72) {
-            var name__$75, attr__$76;
-            for (name__$75 in attrs__$72) {
-                attr__$76 = attrs__$72[name__$75];
-                if (typeof attr__$76 === "undefined") continue;
-                __$ctx._str += " " + name__$75 + '="' + __$ctx.attrEscape(__$ctx.isSimple(attr__$76) ? attr__$76 : __$ctx.reapply(attr__$76)) + '"';
-            }
-        }
-    }
-    if (__$ctx.isShortTag(tag__$36)) {
-        __$ctx._str += "/>";
-    } else {
-        tag__$36 && (__$ctx._str += ">");
-        var __$r__$78;
-        var __$l10__$79 = $$mode;
-        $$mode = "content";
-        __$r__$78 = applyc(__$ctx, __$ref);
-        $$mode = __$l10__$79;
-        var content__$77 = __$r__$78;
-        if (content__$77 || content__$77 === 0) {
-            isBEM__$35 = vBlock__$41 || $$elem;
-            var __$r__$80;
-            var __$l11__$81 = $$mode;
-            $$mode = "";
-            var __$l12__$82 = __$ctx._notNewList;
-            __$ctx._notNewList = false;
-            var __$l13__$83 = __$ctx.position;
-            __$ctx.position = isBEM__$35 ? 1 : __$ctx.position;
-            var __$l14__$84 = __$ctx._listLength;
-            __$ctx._listLength = isBEM__$35 ? 1 : __$ctx._listLength;
-            var __$l15__$85 = __$ctx.ctx;
-            __$ctx.ctx = content__$77;
-            __$r__$80 = applyc(__$ctx, __$ref);
-            $$mode = __$l11__$81;
-            __$ctx._notNewList = __$l12__$82;
-            __$ctx.position = __$l13__$83;
-            __$ctx._listLength = __$l14__$84;
-            __$ctx.ctx = __$l15__$85;
-        }
-        tag__$36 && (__$ctx._str += "</" + tag__$36 + ">");
-    }
-    res__$37 = __$ctx._str;
-    __$r__$39 = undefined;
-    __$ctx._str = __$l0__$40;
-    __$ctx._buf.push(res__$37);
-    return;
-}
-
-function __$b49(__$ctx, __$ref) {
-    var __$r__$87;
-    var __$l0__$88 = $$mode;
-    $$mode = "";
-    var __$l1__$89 = __$ctx.ctx;
-    __$ctx.ctx = __$ctx.ctx._value;
-    var __$r__$91;
-    var __$l2__$92 = __$ctx.__$a0;
-    __$ctx.__$a0 = __$ctx.__$a0 | 16;
-    __$r__$91 = applyc(__$ctx, __$ref);
-    __$ctx.__$a0 = __$l2__$92;
-    __$r__$87 = __$r__$91;
-    $$mode = __$l0__$88;
-    __$ctx.ctx = __$l1__$89;
-    return;
-}
-
-function __$b50(__$ctx, __$ref) {
-    __$ctx._listLength--;
-    var ctx__$93 = __$ctx.ctx;
-    if (ctx__$93 && ctx__$93 !== true || ctx__$93 === 0) {
-        __$ctx._str += ctx__$93 + "";
-    }
-    return;
-}
-
-function __$b51(__$ctx, __$ref) {
-    __$ctx._listLength--;
-    return;
-}
-
-function __$b52(__$ctx, __$ref) {
-    var ctx__$94 = __$ctx.ctx, len__$95 = ctx__$94.length, i__$96 = 0, prevPos__$97 = __$ctx.position, prevNotNewList__$98 = __$ctx._notNewList;
-    if (prevNotNewList__$98) {
-        __$ctx._listLength += len__$95 - 1;
-    } else {
-        __$ctx.position = 0;
-        __$ctx._listLength = len__$95;
-    }
-    __$ctx._notNewList = true;
-    while (i__$96 < len__$95) (function __$lb__$99() {
-        var __$r__$100;
-        var __$l0__$101 = __$ctx.ctx;
-        __$ctx.ctx = ctx__$94[i__$96++];
-        __$r__$100 = applyc(__$ctx, __$ref);
-        __$ctx.ctx = __$l0__$101;
-        return __$r__$100;
-    })();
-    prevNotNewList__$98 || (__$ctx.position = prevPos__$97);
-    return;
-}
-
-function __$b53(__$ctx, __$ref) {
-    __$ctx.ctx || (__$ctx.ctx = {});
-    var vBlock__$102 = __$ctx.ctx.block, vElem__$103 = __$ctx.ctx.elem, block__$104 = __$ctx._currBlock || $$block;
-    var __$r__$106;
-    var __$l0__$107 = $$mode;
-    $$mode = "default";
-    var __$l1__$108 = $$block;
-    $$block = vBlock__$102 || (vElem__$103 ? block__$104 : undefined);
-    var __$l2__$109 = __$ctx._currBlock;
-    __$ctx._currBlock = vBlock__$102 || vElem__$103 ? undefined : block__$104;
-    var __$l3__$110 = $$elem;
-    $$elem = vElem__$103;
-    var __$l4__$111 = $$mods;
-    $$mods = vBlock__$102 ? __$ctx.ctx.mods || (__$ctx.ctx.mods = {}) : $$mods;
-    var __$l5__$112 = $$elemMods;
-    $$elemMods = __$ctx.ctx.elemMods || {};
-    $$block || $$elem ? __$ctx.position = (__$ctx.position || 0) + 1 : __$ctx._listLength--;
-    applyc(__$ctx, __$ref);
-    __$r__$106 = undefined;
-    $$mode = __$l0__$107;
-    $$block = __$l1__$108;
-    __$ctx._currBlock = __$l2__$109;
-    $$elem = __$l3__$110;
-    $$mods = __$l4__$111;
-    $$elemMods = __$l5__$112;
-    return;
-}
-
-function __$g0(__$ctx, __$ref) {
-    var __$t = $$block;
-    if (__$t === "btn") {
+var __$m1 = {
+    footer: function(__$ctx, __$ref) {
         if (!$$elem) {
-            return "input";
+            return "footer";
         }
-    } else if (__$t === "auth") {
+        return __$ref;
+    },
+    qcontact: function(__$ctx, __$ref) {
         var __$t = $$elem;
-        if (__$t === "reg") {
-            return "a";
+        if (__$t === "button") {
+            return "input";
         } else if (__$t === "input") {
             return "input";
         } else if (__$t === "label") {
             return "label";
+        } else if (__$t === "header") {
+            return "h3";
+        }
+        if (!$$elem) {
+            return "form";
+        }
+        return __$ref;
+    },
+    header: function(__$ctx, __$ref) {
+        var __$t = $$elem;
+        if (__$t === "slogan") {
+            return "h2";
+        } else if (__$t === "menu") {
+            return "nav";
+        }
+        if (!$$elem) {
+            return "header";
+        }
+        return __$ref;
+    },
+    "photo-stock": function(__$ctx, __$ref) {
+        var __$t = $$elem;
+        if (__$t === "header") {
+            return "h3";
+        } else if (__$t === "item-img") {
+            return "img";
+        } else if (__$t === "item-link") {
+            return "a";
+        } else if (__$t === "item") {
+            return "li";
+        } else if (__$t === "list") {
+            return "ul";
+        }
+        return __$ref;
+    },
+    testimonial: function(__$ctx, __$ref) {
+        if ($$elem === "header") {
+            return "h3";
+        }
+        return __$ref;
+    },
+    mylist: function(__$ctx, __$ref) {
+        var __$t = $$elem;
+        if (__$t === "header") {
+            if ($$mods && $$mods["services"] === true) {
+                return "h2";
+            }
+            return "h3";
+        } else if (__$t === "item") {
+            return "li";
+        } else if (__$t === "list") {
+            return "ul";
+        }
+        return __$ref;
+    },
+    frame: function(__$ctx, __$ref) {
+        var __$t = $$elem;
+        if (__$t === "label") {
+            return "a";
+        } else if (__$t === "img") {
+            return "img";
+        }
+        return __$ref;
+    },
+    services: function(__$ctx, __$ref) {
+        var __$t = $$elem;
+        if (__$t === "header") {
+            return "h3";
+        } else if (__$t === "dlist-link") {
+            return "a";
+        } else if (__$t === "dlist-desc") {
+            return "dd";
+        } else if (__$t === "dlist-term") {
+            return "dt";
+        } else if (__$t === "dlist") {
+            return "dl";
+        }
+        return __$ref;
+    },
+    "content-info": function(__$ctx, __$ref) {
+        if ($$elem === "item") {
+            return "p";
+        }
+        return __$ref;
+    },
+    icon: function(__$ctx, __$ref) {
+        if (!$$elem) {
+            return "i";
+        }
+        return __$ref;
+    },
+    article: function(__$ctx, __$ref) {
+        var __$t = $$elem;
+        if (__$t === "date") {
+            return "p";
+        } else if (__$t === "readmore") {
+            return "a";
+        }
+        return __$ref;
+    },
+    btn: function(__$ctx, __$ref) {
+        if (!$$elem) {
+            return "input";
+        }
+        return __$ref;
+    },
+    auth: function(__$ctx, __$ref) {
+        var __$t = $$elem;
+        if (__$t === "input") {
+            return "input";
+        } else if (__$t === "label") {
+            return "label";
+        } else if (__$t === "reg") {
+            return "a";
         } else if (__$t === "name") {
             return "p";
         }
         if (!$$elem) {
             return "form";
         }
-    } else if (__$t === "nav") {
-        var __$t = $$elem;
-        if (__$t === "link") {
+        return __$ref;
+    },
+    mylink: function(__$ctx, __$ref) {
+        if (!$$elem) {
             return "a";
-        } else if (__$t === "item") {
+        }
+        return __$ref;
+    },
+    nav: function(__$ctx, __$ref) {
+        var __$t = $$elem;
+        if (__$t === "item") {
             return "li";
+        } else if (__$t === "link") {
+            return "a";
         }
         if (!$$elem) {
             return "ul";
         }
-    }
-    var __$t = $$elem;
-    if (__$t === "slogan") {
-        return "h2";
-    } else if (__$t === "menu") {
-        return "nav";
-    }
-    var __$t = $$block;
-    if (__$t === "page") {
+        return __$ref;
+    },
+    page: function(__$ctx, __$ref) {
         var __$t = $$elem;
         if (__$t === "link") {
             return "link";
@@ -1242,12 +1017,830 @@ function __$g0(__$ctx, __$ref) {
         if (!$$elem) {
             return "body";
         }
-    } else if (__$t === "ua") {
+        return __$ref;
+    },
+    ua: function(__$ctx, __$ref) {
         if (!$$elem) {
             return "script";
         }
+        return __$ref;
     }
-    return undefined;
+};
+
+function __$b1(__$ctx, __$ref) {
+    var content__$0 = [];
+    __$ctx.ctx.links.forEach(function(link) {
+        content__$0.push({
+            elem: "valid-link",
+            mix: {
+                block: "btn"
+            },
+            tag: "a",
+            attrs: {
+                href: "#"
+            },
+            content: [ link, "<br>" ]
+        });
+    });
+    return content__$0;
+}
+
+function __$b2(__$ctx, __$ref) {
+    var content__$1 = [];
+    content__$1.push({
+        elem: "header",
+        content: "Quick Contact"
+    }, {
+        elem: "input-group",
+        content: [ {
+            elem: "label",
+            attrs: {
+                "for": "qcontact__name"
+            },
+            content: "Name"
+        }, {
+            elem: "input",
+            attrs: {
+                id: "qcontact__name",
+                type: "text",
+                name: "name",
+                placeholder: "- enter your name -"
+            }
+        } ]
+    }, {
+        elem: "input-group",
+        content: [ {
+            elem: "label",
+            attrs: {
+                "for": "qcontact__email"
+            },
+            content: "Email"
+        }, {
+            elem: "input",
+            attrs: {
+                id: "qcontact__email",
+                type: "text",
+                name: "email",
+                placeholder: "- enter your email -"
+            }
+        } ]
+    }, {
+        elem: "input-btns",
+        content: [ {
+            elem: "button",
+            attrs: {
+                type: "button",
+                name: "quote",
+                value: "Need a Quote?"
+            }
+        }, {
+            elem: "button",
+            attrs: {
+                type: "submit",
+                name: "submit",
+                value: "Submit"
+            }
+        } ]
+    });
+    return content__$1;
+}
+
+function __$b3(__$ctx, __$ref) {
+    var content__$2 = [], photolist__$3 = [];
+    content__$2.push({
+        elem: "header",
+        content: __$ctx.ctx.header
+    });
+    __$ctx.ctx.items.forEach(function(item) {
+        photolist__$3.push({
+            elem: "item",
+            content: [ {
+                elem: "item-link",
+                mix: {
+                    block: "mylink",
+                    mods: {
+                        pszoom: true
+                    }
+                },
+                attrs: {
+                    href: item.url
+                },
+                content: [ {
+                    elem: "item-img",
+                    attrs: {
+                        src: item.img
+                    }
+                }, "view large" ]
+            } ]
+        });
+    });
+    content__$2.push({
+        elem: "list",
+        content: photolist__$3
+    });
+    return content__$2;
+}
+
+function __$b4(__$ctx, __$ref) {
+    var content__$4 = [];
+    content__$4.push({
+        elem: "content",
+        content: __$ctx.ctx.content
+    }, {
+        block: "content-info",
+        mods: {
+            blockquote: true
+        },
+        items: [ {
+            type: "author",
+            content: __$ctx.ctx.author
+        } ]
+    });
+    return content__$4;
+}
+
+function __$b5(__$ctx, __$ref) {
+    var content__$5 = [];
+    content__$5.push({
+        elem: "header",
+        content: "Testimonial"
+    }, __$ctx.ctx.content);
+    return content__$5;
+}
+
+function __$b6(__$ctx, __$ref) {
+    var content__$6 = [];
+    var projectlist__$7 = [];
+    content__$6.push({
+        elem: "header",
+        content: __$ctx.ctx.header
+    });
+    __$ctx.ctx.items.forEach(function(item) {
+        var tag__$8 = "a", attrs__$9 = {
+            href: item.url
+        }, mods__$10 = null;
+        if (item.active === true) {
+            tag__$8 = "span";
+            attrs__$9 = null;
+            mods__$10 = {
+                active: true
+            };
+        }
+        projectlist__$7.push({
+            elem: "item",
+            elemMods: mods__$10,
+            content: [ {
+                elem: "link",
+                tag: tag__$8,
+                attrs: attrs__$9,
+                content: item.title
+            } ]
+        });
+    });
+    content__$6.push({
+        elem: "list",
+        content: projectlist__$7
+    });
+    return content__$6;
+}
+
+function __$b7(__$ctx, __$ref) {
+    var content__$11 = [];
+    content__$11.push({
+        elem: "label",
+        mix: {
+            block: "mylink",
+            mods: {
+                services: true
+            }
+        },
+        attrs: {
+            href: __$ctx.ctx.url
+        },
+        content: [ {
+            elem: "img",
+            attrs: {
+                src: __$ctx.ctx.img
+            }
+        }, __$ctx.ctx.label ]
+    });
+    return content__$11;
+}
+
+function __$b8(__$ctx, __$ref) {
+    var content__$12 = [];
+    var list_items__$13 = [];
+    __$ctx.ctx.content.forEach(function(item) {
+        list_items__$13.push({
+            elem: "dlist-desc",
+            content: [ {
+                elem: "dlist-link",
+                attrs: {
+                    href: "#"
+                },
+                content: [ {
+                    block: "icon",
+                    mods: {
+                        pen: true
+                    }
+                }, item ]
+            } ]
+        });
+    });
+    content__$12.push({
+        elem: "dlist-term",
+        content: "Services"
+    }, list_items__$13);
+    return content__$12;
+}
+
+function __$b9(__$ctx, __$ref) {
+    var content__$14 = [];
+    content__$14.push({
+        elem: "header",
+        content: __$ctx.ctx.title
+    });
+    content__$14.push(__$ctx.ctx.content);
+    return content__$14;
+}
+
+function __$b13(__$ctx, __$ref) {
+    var content__$15 = [];
+    var menu_items__$16 = [];
+    __$ctx.ctx.items.forEach(function(item) {
+        menu_items__$16.push({
+            elem: "item",
+            elemMods: {
+                type: item.type
+            },
+            content: item.content
+        });
+    });
+    content__$15.push(menu_items__$16);
+    return content__$15;
+}
+
+function __$b14(__$ctx, __$ref) {
+    var content__$17 = [];
+    var article_data__$18 = [];
+    var menu_items__$19 = [];
+    if (__$ctx.ctx.date) menu_items__$19.push({
+        type: "date",
+        content: __$ctx.ctx.date
+    });
+    if (__$ctx.ctx.author) menu_items__$19.push({
+        type: "author",
+        content: __$ctx.ctx.author
+    });
+    menu_items__$19.push({
+        type: "more",
+        content: "Read More"
+    });
+    content__$17.push({
+        elem: "title",
+        content: __$ctx.ctx.title
+    }, __$ctx.ctx.content, {
+        block: "content-info",
+        mix: {
+            block: __$ctx.ctx.block,
+            elem: "info"
+        },
+        items: menu_items__$19
+    });
+    return content__$17;
+}
+
+function __$b15(__$ctx, __$ref) {
+    var content__$20 = [];
+    content__$20.push({
+        elem: "name",
+        content: "User Login"
+    }, {
+        elem: "label",
+        attrs: {
+            "for": "auth__username"
+        },
+        content: "Username"
+    }, {
+        elem: "input",
+        attrs: {
+            id: "auth__username",
+            type: "text",
+            name: "login",
+            placeholder: "Username"
+        }
+    }, {
+        elem: "label",
+        attrs: {
+            "for": "auth__pass"
+        },
+        content: "Password"
+    }, {
+        elem: "input",
+        attrs: {
+            id: "auth__pass",
+            type: "text",
+            name: "login",
+            placeholder: "Password"
+        }
+    }, {
+        elem: "submit",
+        content: [ "Not yet a Member? ", {
+            block: "mylink",
+            mods: {
+                size: "large"
+            },
+            attrs: {
+                href: "#"
+            },
+            content: "Register Now"
+        }, {
+            block: "btn",
+            mix: {
+                block: "auth",
+                elem: "submit-btn"
+            },
+            attrs: {
+                type: "submit",
+                name: "submit",
+                value: "Login"
+            }
+        } ]
+    });
+    return content__$20;
+}
+
+function __$b16(__$ctx, __$ref) {
+    var content__$21 = [];
+    __$ctx.ctx.items.forEach(function(item) {
+        content__$21.push({
+            elem: "item",
+            elemMods: {
+                active: item.active
+            },
+            content: [ {
+                elem: "link",
+                attrs: {
+                    href: item.url
+                },
+                content: item.title
+            } ]
+        });
+    });
+    return content__$21;
+}
+
+function __$b50(__$ctx, __$ref) {
+    var url__$22 = __$ctx.ctx.url;
+    var __$r__$24;
+    var __$l0__$25 = $$mode;
+    $$mode = "";
+    var __$l1__$26 = __$ctx.ctx;
+    __$ctx.ctx = [ 6, 7, 8, 9 ].map(function(v) {
+        return {
+            elem: "css",
+            url: url__$22 + ".ie" + v + ".css",
+            ie: "IE " + v
+        };
+    });
+    var __$r__$28;
+    var __$l2__$29 = __$ctx.__$a0;
+    __$ctx.__$a0 = __$ctx.__$a0 | 1;
+    __$r__$28 = applyc(__$ctx, __$ref);
+    __$ctx.__$a0 = __$l2__$29;
+    __$r__$24 = __$r__$28;
+    $$mode = __$l0__$25;
+    __$ctx.ctx = __$l1__$26;
+    return;
+}
+
+function __$b51(__$ctx, __$ref) {
+    var ie__$30 = __$ctx.ctx.ie, hideRule__$31 = !ie__$30 ? [ "gt IE 9", "<!-->", "<!--" ] : ie__$30 === "!IE" ? [ ie__$30, "<!-->", "<!--" ] : [ ie__$30, "", "" ];
+    var __$r__$33;
+    var __$l0__$34 = $$mode;
+    $$mode = "";
+    var __$l3__$35 = __$ctx.ctx;
+    var __$l1__$36 = __$l3__$35._ieCommented;
+    __$l3__$35._ieCommented = true;
+    var __$l2__$37 = __$ctx.ctx;
+    __$ctx.ctx = [ "<!--[if " + hideRule__$31[0] + "]>" + hideRule__$31[1], __$ctx.ctx, hideRule__$31[2] + "<![endif]-->" ];
+    __$r__$33 = applyc(__$ctx, __$ref);
+    $$mode = __$l0__$34;
+    __$l3__$35._ieCommented = __$l1__$36;
+    __$ctx.ctx = __$l2__$37;
+    return;
+}
+
+function __$b52(__$ctx, __$ref) {
+    __$ctx._defPageApplied = true;
+    var ctx__$44 = __$ctx.ctx;
+    var __$r__$46;
+    var __$l0__$47 = $$mode;
+    $$mode = "";
+    var __$l1__$48 = __$ctx.ctx;
+    __$ctx.ctx = [ ctx__$44.doctype || "<!DOCTYPE html>", {
+        tag: "html",
+        cls: "ua_js_no",
+        content: [ {
+            elem: "head",
+            content: [ {
+                tag: "meta",
+                attrs: {
+                    charset: "utf-8"
+                }
+            }, {
+                tag: "title",
+                content: ctx__$44.title
+            }, {
+                block: "ua"
+            }, ctx__$44.head, ctx__$44.styles, ctx__$44.favicon ? {
+                elem: "favicon",
+                url: ctx__$44.favicon
+            } : "" ]
+        }, ctx__$44 ]
+    } ];
+    var __$r__$50;
+    var __$l2__$51 = __$ctx.__$a0;
+    __$ctx.__$a0 = __$ctx.__$a0 | 8;
+    __$r__$50 = applyc(__$ctx, __$ref);
+    __$ctx.__$a0 = __$l2__$51;
+    __$r__$46 = __$r__$50;
+    $$mode = __$l0__$47;
+    __$ctx.ctx = __$l1__$48;
+    __$ctx._defPageApplied = false;
+    return;
+}
+
+function __$b53(__$ctx, __$ref) {
+    var _this__$52 = __$ctx, BEM_INTERNAL__$53 = _this__$52.BEM.INTERNAL, ctx__$54 = __$ctx.ctx, isBEM__$55, tag__$56, res__$57;
+    var __$r__$59;
+    var __$l0__$60 = __$ctx._str;
+    __$ctx._str = "";
+    var vBlock__$61 = $$block;
+    var __$r__$63;
+    var __$l1__$64 = $$mode;
+    $$mode = "tag";
+    __$r__$63 = applyc(__$ctx, __$ref);
+    $$mode = __$l1__$64;
+    tag__$56 = __$r__$63;
+    typeof tag__$56 !== "undefined" || (tag__$56 = ctx__$54.tag);
+    typeof tag__$56 !== "undefined" || (tag__$56 = "div");
+    if (tag__$56) {
+        var jsParams__$65, js__$66;
+        if (vBlock__$61 && ctx__$54.js !== false) {
+            var __$r__$67;
+            var __$l2__$68 = $$mode;
+            $$mode = "js";
+            __$r__$67 = applyc(__$ctx, __$ref);
+            $$mode = __$l2__$68;
+            js__$66 = __$r__$67;
+            js__$66 = js__$66 ? __$ctx.extend(ctx__$54.js, js__$66 === true ? {} : js__$66) : ctx__$54.js === true ? {} : ctx__$54.js;
+            js__$66 && ((jsParams__$65 = {})[BEM_INTERNAL__$53.buildClass(vBlock__$61, ctx__$54.elem)] = js__$66);
+        }
+        __$ctx._str += "<" + tag__$56;
+        var __$r__$69;
+        var __$l3__$70 = $$mode;
+        $$mode = "bem";
+        __$r__$69 = applyc(__$ctx, __$ref);
+        $$mode = __$l3__$70;
+        isBEM__$55 = __$r__$69;
+        typeof isBEM__$55 !== "undefined" || (isBEM__$55 = typeof ctx__$54.bem !== "undefined" ? ctx__$54.bem : ctx__$54.block || ctx__$54.elem);
+        var __$r__$72;
+        var __$l4__$73 = $$mode;
+        $$mode = "cls";
+        __$r__$72 = applyc(__$ctx, __$ref);
+        $$mode = __$l4__$73;
+        var cls__$71 = __$r__$72;
+        cls__$71 || (cls__$71 = ctx__$54.cls);
+        var addJSInitClass__$74 = ctx__$54.block && jsParams__$65;
+        if (isBEM__$55 || cls__$71) {
+            __$ctx._str += ' class="';
+            if (isBEM__$55) {
+                __$ctx._str += BEM_INTERNAL__$53.buildClasses(vBlock__$61, ctx__$54.elem, ctx__$54.elemMods || ctx__$54.mods);
+                var __$r__$76;
+                var __$l5__$77 = $$mode;
+                $$mode = "mix";
+                __$r__$76 = applyc(__$ctx, __$ref);
+                $$mode = __$l5__$77;
+                var mix__$75 = __$r__$76;
+                ctx__$54.mix && (mix__$75 = mix__$75 ? [].concat(mix__$75, ctx__$54.mix) : ctx__$54.mix);
+                if (mix__$75) {
+                    var visited__$78 = {}, visitedKey__$79 = function(block, elem) {
+                        return (block || "") + "__" + (elem || "");
+                    };
+                    visited__$78[visitedKey__$79(vBlock__$61, $$elem)] = true;
+                    __$ctx.isArray(mix__$75) || (mix__$75 = [ mix__$75 ]);
+                    for (var i__$80 = 0; i__$80 < mix__$75.length; i__$80++) {
+                        var mixItem__$81 = mix__$75[i__$80], hasItem__$82 = mixItem__$81.block || mixItem__$81.elem, mixBlock__$83 = mixItem__$81.block || mixItem__$81._block || _this__$52.block, mixElem__$84 = mixItem__$81.elem || mixItem__$81._elem || _this__$52.elem;
+                        hasItem__$82 && (__$ctx._str += " ");
+                        __$ctx._str += BEM_INTERNAL__$53[hasItem__$82 ? "buildClasses" : "buildModsClasses"](mixBlock__$83, mixItem__$81.elem || mixItem__$81._elem || (mixItem__$81.block ? undefined : _this__$52.elem), mixItem__$81.elemMods || mixItem__$81.mods);
+                        if (mixItem__$81.js) {
+                            (jsParams__$65 || (jsParams__$65 = {}))[BEM_INTERNAL__$53.buildClass(mixBlock__$83, mixItem__$81.elem)] = mixItem__$81.js === true ? {} : mixItem__$81.js;
+                            addJSInitClass__$74 || (addJSInitClass__$74 = mixBlock__$83 && !mixItem__$81.elem);
+                        }
+                        if (hasItem__$82 && !visited__$78[visitedKey__$79(mixBlock__$83, mixElem__$84)]) {
+                            visited__$78[visitedKey__$79(mixBlock__$83, mixElem__$84)] = true;
+                            var __$r__$86;
+                            var __$l6__$87 = $$mode;
+                            $$mode = "mix";
+                            var __$l7__$88 = $$block;
+                            $$block = mixBlock__$83;
+                            var __$l8__$89 = $$elem;
+                            $$elem = mixElem__$84;
+                            __$r__$86 = applyc(__$ctx, __$ref);
+                            $$mode = __$l6__$87;
+                            $$block = __$l7__$88;
+                            $$elem = __$l8__$89;
+                            var nestedMix__$85 = __$r__$86;
+                            if (nestedMix__$85) {
+                                for (var j__$90 = 0; j__$90 < nestedMix__$85.length; j__$90++) {
+                                    var nestedItem__$91 = nestedMix__$85[j__$90];
+                                    if (!nestedItem__$91.block && !nestedItem__$91.elem || !visited__$78[visitedKey__$79(nestedItem__$91.block, nestedItem__$91.elem)]) {
+                                        nestedItem__$91._block = mixBlock__$83;
+                                        nestedItem__$91._elem = mixElem__$84;
+                                        mix__$75.splice(i__$80 + 1, 0, nestedItem__$91);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            cls__$71 && (__$ctx._str += isBEM__$55 ? " " + cls__$71 : cls__$71);
+            __$ctx._str += addJSInitClass__$74 ? ' i-bem"' : '"';
+        }
+        if (isBEM__$55 && jsParams__$65) {
+            __$ctx._str += ' data-bem="' + __$ctx.attrEscape(JSON.stringify(jsParams__$65)) + '"';
+        }
+        var __$r__$93;
+        var __$l9__$94 = $$mode;
+        $$mode = "attrs";
+        __$r__$93 = applyc(__$ctx, __$ref);
+        $$mode = __$l9__$94;
+        var attrs__$92 = __$r__$93;
+        attrs__$92 = __$ctx.extend(attrs__$92, ctx__$54.attrs);
+        if (attrs__$92) {
+            var name__$95, attr__$96;
+            for (name__$95 in attrs__$92) {
+                attr__$96 = attrs__$92[name__$95];
+                if (typeof attr__$96 === "undefined") continue;
+                __$ctx._str += " " + name__$95 + '="' + __$ctx.attrEscape(__$ctx.isSimple(attr__$96) ? attr__$96 : __$ctx.reapply(attr__$96)) + '"';
+            }
+        }
+    }
+    if (__$ctx.isShortTag(tag__$56)) {
+        __$ctx._str += "/>";
+    } else {
+        tag__$56 && (__$ctx._str += ">");
+        var __$r__$98;
+        var __$l10__$99 = $$mode;
+        $$mode = "content";
+        __$r__$98 = applyc(__$ctx, __$ref);
+        $$mode = __$l10__$99;
+        var content__$97 = __$r__$98;
+        if (content__$97 || content__$97 === 0) {
+            isBEM__$55 = vBlock__$61 || $$elem;
+            var __$r__$100;
+            var __$l11__$101 = $$mode;
+            $$mode = "";
+            var __$l12__$102 = __$ctx._notNewList;
+            __$ctx._notNewList = false;
+            var __$l13__$103 = __$ctx.position;
+            __$ctx.position = isBEM__$55 ? 1 : __$ctx.position;
+            var __$l14__$104 = __$ctx._listLength;
+            __$ctx._listLength = isBEM__$55 ? 1 : __$ctx._listLength;
+            var __$l15__$105 = __$ctx.ctx;
+            __$ctx.ctx = content__$97;
+            __$r__$100 = applyc(__$ctx, __$ref);
+            $$mode = __$l11__$101;
+            __$ctx._notNewList = __$l12__$102;
+            __$ctx.position = __$l13__$103;
+            __$ctx._listLength = __$l14__$104;
+            __$ctx.ctx = __$l15__$105;
+        }
+        tag__$56 && (__$ctx._str += "</" + tag__$56 + ">");
+    }
+    res__$57 = __$ctx._str;
+    __$r__$59 = undefined;
+    __$ctx._str = __$l0__$60;
+    __$ctx._buf.push(res__$57);
+    return;
+}
+
+function __$b55(__$ctx, __$ref) {
+    var __$r__$107;
+    var __$l0__$108 = $$mode;
+    $$mode = "";
+    var __$l1__$109 = __$ctx.ctx;
+    __$ctx.ctx = __$ctx.ctx._value;
+    var __$r__$111;
+    var __$l2__$112 = __$ctx.__$a0;
+    __$ctx.__$a0 = __$ctx.__$a0 | 16;
+    __$r__$111 = applyc(__$ctx, __$ref);
+    __$ctx.__$a0 = __$l2__$112;
+    __$r__$107 = __$r__$111;
+    $$mode = __$l0__$108;
+    __$ctx.ctx = __$l1__$109;
+    return;
+}
+
+function __$b56(__$ctx, __$ref) {
+    __$ctx._listLength--;
+    var ctx__$113 = __$ctx.ctx;
+    if (ctx__$113 && ctx__$113 !== true || ctx__$113 === 0) {
+        __$ctx._str += ctx__$113 + "";
+    }
+    return;
+}
+
+function __$b57(__$ctx, __$ref) {
+    __$ctx._listLength--;
+    return;
+}
+
+function __$b58(__$ctx, __$ref) {
+    var ctx__$114 = __$ctx.ctx, len__$115 = ctx__$114.length, i__$116 = 0, prevPos__$117 = __$ctx.position, prevNotNewList__$118 = __$ctx._notNewList;
+    if (prevNotNewList__$118) {
+        __$ctx._listLength += len__$115 - 1;
+    } else {
+        __$ctx.position = 0;
+        __$ctx._listLength = len__$115;
+    }
+    __$ctx._notNewList = true;
+    while (i__$116 < len__$115) (function __$lb__$119() {
+        var __$r__$120;
+        var __$l0__$121 = __$ctx.ctx;
+        __$ctx.ctx = ctx__$114[i__$116++];
+        __$r__$120 = applyc(__$ctx, __$ref);
+        __$ctx.ctx = __$l0__$121;
+        return __$r__$120;
+    })();
+    prevNotNewList__$118 || (__$ctx.position = prevPos__$117);
+    return;
+}
+
+function __$b59(__$ctx, __$ref) {
+    __$ctx.ctx || (__$ctx.ctx = {});
+    var vBlock__$122 = __$ctx.ctx.block, vElem__$123 = __$ctx.ctx.elem, block__$124 = __$ctx._currBlock || $$block;
+    var __$r__$126;
+    var __$l0__$127 = $$mode;
+    $$mode = "default";
+    var __$l1__$128 = $$block;
+    $$block = vBlock__$122 || (vElem__$123 ? block__$124 : undefined);
+    var __$l2__$129 = __$ctx._currBlock;
+    __$ctx._currBlock = vBlock__$122 || vElem__$123 ? undefined : block__$124;
+    var __$l3__$130 = $$elem;
+    $$elem = vElem__$123;
+    var __$l4__$131 = $$mods;
+    $$mods = vBlock__$122 ? __$ctx.ctx.mods || (__$ctx.ctx.mods = {}) : $$mods;
+    var __$l5__$132 = $$elemMods;
+    $$elemMods = __$ctx.ctx.elemMods || {};
+    $$block || $$elem ? __$ctx.position = (__$ctx.position || 0) + 1 : __$ctx._listLength--;
+    applyc(__$ctx, __$ref);
+    __$r__$126 = undefined;
+    $$mode = __$l0__$127;
+    $$block = __$l1__$128;
+    __$ctx._currBlock = __$l2__$129;
+    $$elem = __$l3__$130;
+    $$mods = __$l4__$131;
+    $$elemMods = __$l5__$132;
+    return;
+}
+
+function __$g0(__$ctx, __$ref) {
+    var __$t = $$block;
+    if (__$t === "footer") {
+        if ($$elem === "valid") {
+            var __$r = __$b1(__$ctx, __$ref);
+            if (__$r !== __$ref) return __$r;
+        }
+    } else if (__$t === "qcontact") {
+        if (!$$elem) {
+            var __$r = __$b2(__$ctx, __$ref);
+            if (__$r !== __$ref) return __$r;
+        }
+    } else if (__$t === "photo-stock") {
+        if (!$$elem) {
+            var __$r = __$b3(__$ctx, __$ref);
+            if (__$r !== __$ref) return __$r;
+        }
+    } else if (__$t === "blockquote") {
+        if (!$$elem) {
+            var __$r = __$b4(__$ctx, __$ref);
+            if (__$r !== __$ref) return __$r;
+        }
+    } else if (__$t === "testimonial") {
+        if (!$$elem) {
+            var __$r = __$b5(__$ctx, __$ref);
+            if (__$r !== __$ref) return __$r;
+        }
+    } else if (__$t === "mylist") {
+        if (!$$elem) {
+            var __$r = __$b6(__$ctx, __$ref);
+            if (__$r !== __$ref) return __$r;
+        }
+    } else if (__$t === "frame") {
+        if (!$$elem) {
+            var __$r = __$b7(__$ctx, __$ref);
+            if (__$r !== __$ref) return __$r;
+        }
+    } else if (__$t === "services") {
+        if ($$elem === "dlist") {
+            var __$r = __$b8(__$ctx, __$ref);
+            if (__$r !== __$ref) return __$r;
+        }
+        if (!$$elem) {
+            var __$r = __$b9(__$ctx, __$ref);
+            if (__$r !== __$ref) return __$r;
+        }
+    } else if (__$t === "content-info") {
+        var __$t = $$elem;
+        if (__$t === "item") {
+            var __$t = $$elemMods;
+            if (__$t) {
+                var __$t = $$elemMods["type"];
+                if (__$t === "author") {
+                    return [ {
+                        block: "icon",
+                        mods: {
+                            pen: true
+                        }
+                    }, "by ", {
+                        block: "mylink",
+                        content: __$ctx.ctx.content
+                    } ];
+                } else if (__$t === "more") {
+                    return [ {
+                        block: "mylink",
+                        content: [ {
+                            block: "icon",
+                            mods: {
+                                pen: true
+                            }
+                        }, __$ctx.ctx.content ]
+                    } ];
+                } else if (__$t === "date") {
+                    return [ {
+                        block: "icon",
+                        mods: {
+                            cal: true
+                        }
+                    }, __$ctx.ctx.content ];
+                }
+            }
+        }
+        if (!$$elem) {
+            var __$r = __$b13(__$ctx, __$ref);
+            if (__$r !== __$ref) return __$r;
+        }
+    } else if (__$t === "article") {
+        if (!$$elem) {
+            var __$r = __$b14(__$ctx, __$ref);
+            if (__$r !== __$ref) return __$r;
+        }
+    } else if (__$t === "auth") {
+        if (!$$elem) {
+            var __$r = __$b15(__$ctx, __$ref);
+            if (__$r !== __$ref) return __$r;
+        }
+    } else if (__$t === "nav") {
+        if (!$$elem) {
+            var __$r = __$b16(__$ctx, __$ref);
+            if (__$r !== __$ref) return __$r;
+        }
+    } else if (__$t === "page") {
+        if ($$elem === "head" && (__$ctx.__$a0 & 2) === 0) {
+            return [ __$ctx.ctx["x-ua-compatible"] === false ? false : {
+                tag: "meta",
+                attrs: {
+                    "http-equiv": "X-UA-Compatible",
+                    content: __$ctx.ctx["x-ua-compatible"] || "IE=edge"
+                }
+            }, function __$lb__$38() {
+                var __$r__$39;
+                var __$l0__$40 = __$ctx.__$a0;
+                __$ctx.__$a0 = __$ctx.__$a0 | 2;
+                __$r__$39 = applyc(__$ctx, __$ref);
+                __$ctx.__$a0 = __$l0__$40;
+                return __$r__$39;
+            }() ];
+        }
+        if (!$$elem && (__$ctx.__$a0 & 4) === 0) {
+            return [ function __$lb__$41() {
+                var __$r__$42;
+                var __$l0__$43 = __$ctx.__$a0;
+                __$ctx.__$a0 = __$ctx.__$a0 | 4;
+                __$r__$42 = applyc(__$ctx, __$ref);
+                __$ctx.__$a0 = __$l0__$43;
+                return __$r__$42;
+            }(), __$ctx.ctx.scripts ];
+        }
+    } else if (__$t === "ua") {
+        if (!$$elem) {
+            return [ "(function(e,c){", 'e[c]=e[c].replace(/(ua_js_)no/g,"$1yes");', '})(document.documentElement,"className");' ];
+        }
+    }
+    return __$ctx.ctx.content;
     return __$ref;
 };
      return exports;
@@ -4681,6 +5274,17 @@ provide();
 
 
 /* end: ../../desktop.blocks/nav/nav.browser.js */
+/* begin: ../../desktop.blocks/mylink/mylink.browser.js */
+/* global modules:false */
+
+modules.define('mylink', function(provide) {
+
+provide();
+
+});
+
+
+/* end: ../../desktop.blocks/mylink/mylink.browser.js */
 /* begin: ../../desktop.blocks/logo/logo.browser.js */
 /* global modules:false */
 
@@ -4714,6 +5318,149 @@ provide();
 
 
 /* end: ../../desktop.blocks/btn/btn.browser.js */
+/* begin: ../../desktop.blocks/content/content.browser.js */
+/* global modules:false */
+
+modules.define('content', function(provide) {
+
+provide();
+
+});
+
+
+/* end: ../../desktop.blocks/content/content.browser.js */
+/* begin: ../../desktop.blocks/article/article.browser.js */
+/* global modules:false */
+
+modules.define('article', function(provide) {
+
+provide();
+
+});
+
+
+/* end: ../../desktop.blocks/article/article.browser.js */
+/* begin: ../../desktop.blocks/icon/icon.browser.js */
+/* global modules:false */
+
+modules.define('icon', function(provide) {
+
+provide();
+
+});
+
+
+/* end: ../../desktop.blocks/icon/icon.browser.js */
+/* begin: ../../desktop.blocks/content-info/content-info.browser.js */
+/* global modules:false */
+
+modules.define('content-menu', function(provide) {
+
+provide();
+
+});
+
+
+/* end: ../../desktop.blocks/content-info/content-info.browser.js */
+/* begin: ../../desktop.blocks/services/services.browser.js */
+/* global modules:false */
+
+modules.define('services', function(provide) {
+
+provide();
+
+});
+
+
+/* end: ../../desktop.blocks/services/services.browser.js */
+/* begin: ../../desktop.blocks/frame/frame.browser.js */
+/* global modules:false */
+
+modules.define('frame', function(provide) {
+
+provide();
+
+});
+
+
+/* end: ../../desktop.blocks/frame/frame.browser.js */
+/* begin: ../../desktop.blocks/mylist/mylist.browser.js */
+/* global modules:false */
+
+modules.define('mylist', function(provide) {
+
+provide();
+
+});
+
+
+/* end: ../../desktop.blocks/mylist/mylist.browser.js */
+/* begin: ../../desktop.blocks/heading/heading.browser.js */
+/* global modules:false */
+
+modules.define('heading', function(provide) {
+
+provide();
+
+});
+
+
+/* end: ../../desktop.blocks/heading/heading.browser.js */
+/* begin: ../../desktop.blocks/testimonial/testimonial.browser.js */
+/* global modules:false */
+
+modules.define('testimonial', function(provide) {
+
+provide();
+
+});
+
+
+/* end: ../../desktop.blocks/testimonial/testimonial.browser.js */
+/* begin: ../../desktop.blocks/blockquote/blockquote.browser.js */
+/* global modules:false */
+
+modules.define('blockquote', function(provide) {
+
+provide();
+
+});
+
+
+/* end: ../../desktop.blocks/blockquote/blockquote.browser.js */
+/* begin: ../../desktop.blocks/sidebar/sidebar.browser.js */
+/* global modules:false */
+
+modules.define('sidebar', function(provide) {
+
+provide();
+
+});
+
+
+/* end: ../../desktop.blocks/sidebar/sidebar.browser.js */
+/* begin: ../../desktop.blocks/photo-stock/photo-stock.browser.js */
+/* global modules:false */
+
+modules.define('photo-stock', function(provide) {
+
+provide();
+
+});
+
+
+/* end: ../../desktop.blocks/photo-stock/photo-stock.browser.js */
+/* begin: ../../desktop.blocks/qcontact/qcontact.browser.js */
+/* global modules:false */
+
+modules.define('qcontact', function(provide) {
+
+provide();
+
+});
+
+
+/* end: ../../desktop.blocks/qcontact/qcontact.browser.js */
 /* begin: ../../desktop.blocks/footer/footer.browser.js */
 /* global modules:false */
 

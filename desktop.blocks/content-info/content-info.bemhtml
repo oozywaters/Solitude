@@ -1,0 +1,77 @@
+block('content-info')(
+  content()(function() {
+    var content = [];
+    var menu_items = [];
+
+    this.ctx.items.forEach(function(item) {
+      menu_items.push(
+          {
+            elem: 'item',
+            elemMods: { type: item.type },
+            content: item.content
+          }
+        );
+      });
+    // content.push(
+    //     {
+    //       elem: 'list',
+    //       content: menu_items
+    //     }
+    //   );
+    content.push(menu_items);
+    return content;
+    }),
+    // elem('list')(tag()('ul')),
+    elem('item')(
+      tag()('p'),
+      elemMod('type', 'date')(
+        content()(function() {
+          return [
+            {
+              block: 'icon',
+              mods: { cal: true },
+              // content: this.ctx.content
+            },
+            this.ctx.content
+          ]
+          })
+        ),
+      elemMod('type', 'more')(
+        content()(function() {
+          return [
+            {
+              block: 'mylink',
+              content: [
+                {
+                  block: 'icon',
+                  mods: { pen: true }
+                },
+                this.ctx.content
+              ]
+            }
+          ]
+          })
+        ),
+      elemMod('type', 'author')(
+        content()(function() {
+          return [
+            {
+              block: 'icon',
+              mods: { pen: true },
+            },
+            'by ',
+            {
+              block: 'mylink',
+              content: this.ctx.content
+            }
+          ]
+          })
+          )
+      )
+  );
+
+// block('content-menu')(
+//   elem('item')(
+//     elemMod('type', 'date').content()('HELLO')
+//     )
+//   )

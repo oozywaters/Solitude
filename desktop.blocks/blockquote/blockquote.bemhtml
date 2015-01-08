@@ -7,7 +7,7 @@ block('blockquote')(
           content: this.ctx.content
         },
         {
-          block: 'content-menu',
+          block: 'content-info',
           mods: { blockquote: true },
           items: [
             {

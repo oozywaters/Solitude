@@ -1,7 +1,7 @@
 ({
     block: 'page',
     title: 'Solitude',
-    favicon: '/favicon.ico',
+    favicon: 'favicon.ico',
     head: [
         { elem: 'meta', attrs: { name: 'description', content: '' } },
         { elem: 'meta', attrs: { name: 'viewport', content: 'width=device-width, initial-scale=1' } },
@@ -83,7 +83,7 @@
                                         },
                                         {
                                             elem: 'text',
-                                            content: '<strong>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla libero leo, suscipit acfaucibusnon.</strong>                 Etiam est. Etiam ac ipsum sed pede ultricies pretium. Nulla mi lacus, fringilla eu, pulvinar at, commodo eu, dolor. Nam porttitor viverra sapien. Pellentesque vitae augue et lorem laoreet .'
+                                            content: '<strong>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla libero leo, suscipit acfaucibusnon.</strong><p>Etiam est. Etiam ac ipsum sed pede ultricies pretium. Nulla mi lacus, fringilla eu, pulvinar at, commodo eu, dolor. Nam porttitor viverra sapien. Pellentesque vitae augue et lorem laoreet.</p>'
                                         }
                                     ]
                                 },
@@ -120,7 +120,7 @@
                                             items: [
                                                 {
                                                     url: '#',
-                                                    title: 'Nam congue quam non augue.'
+                                                    title: 'Nam congue quam non augue ivamus porttitor'
                                                 },
                                                 {
                                                     url: '#',

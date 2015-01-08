@@ -1,8 +1,10 @@
 # Статичная верстка макета [Solitude](http://www.templateworld.com/free_templates.html)
 
-Проект для создания статичной верстки psd-макета Solitude с использованием полного стэка БЭМ-технологий.
+Проект для создания статичной верстки psd-макета "Solitude" с использованием полного стэка БЭМ-технологий.
 
 Проект основан на [`project-stub`](https://github.com/bem/project-stub/tree/enb-merged-config)
+
+Готовый результат можно посмотреть [тут](http://104.236.43.137/solitude/index.html)
 
 ## Локальный запуск
 
