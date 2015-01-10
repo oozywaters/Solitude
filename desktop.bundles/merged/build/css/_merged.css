@@ -1,4 +1,511 @@
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/page/page.styl:begin */
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/header/header.styl:begin */
+.header {
+  position: relative;
+  height: 452px;
+}
+.header__menu {
+  position: absolute;
+  top: 32px;
+  right: 15px;
+}
+.header__logo {
+  position: absolute;
+  top: 75px;
+  right: 208px;
+}
+.header__auth {
+  position: absolute;
+  top: 147px;
+  right: 16px;
+}
+.header__slogan {
+  font: 28px Georgia;
+  line-height: 30px;
+  text-align: center;
+  padding: 0px 98px;
+  color: #497f35;
+  position: absolute;
+  bottom: 1px;
+  left: 0px;
+}
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/header/header.styl:end */
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/nav/nav.styl:begin */
+.nav {
+  list-style: none;
+  font-weight: bold;
+}
+.nav__item {
+  display: inline-block;
+  padding: 2px 2px 0px 10px;
+  height: 19px;
+  background: url('../templates/menu_active.png') no-repeat 0px -38px;
+}
+.nav__item:first-child {
+  background: none;
+}
+.nav__link {
+  color: #45ada9;
+  padding: 2px 6px 1px 0px;
+  text-decoration: none;
+}
+.nav__item_active:first-child,
+nav__item:first-child:hover {
+  padding-left: 9px;
+  background: url('../templates/menu_active.png') no-repeat -1px -19px !important;
+}
+.nav_top .nav__item_active,
+.nav_top .nav__item:hover {
+  padding-top: 0px;
+  background-position: 0px -19px;
+}
+.nav_top .nav__item_active .nav__link,
+.nav_top .nav__item:hover .nav__link {
+  color: #943415;
+  display: block;
+  height: 16px;
+  background: url('../templates/menu_active.png') no-repeat right 0px;
+}
+.nav_bottom .nav__item {
+  background: url('../templates/nav_bottom_sep.gif') no-repeat 0px 2px;
+  padding: 0px 7px;
+}
+.nav_bottom .nav__item:first-child {
+  background: none;
+}
+.nav_bottom .nav__item .nav__link {
+  padding: 0;
+}
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/nav/nav.styl:end */
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/mylink/mylink.styl:begin */
+.mylink {
+  font: 11px Arial;
+  font-weight: bold;
+  color: #943415;
+  text-decoration: none;
+}
+.mylink:hover {
+  text-decoration: underline;
+}
+.mylink_size_large {
+  font-size: 16px;
+  font-weight: normal;
+}
+.mylink_pszoom {
+  background: url('../templates/zoom.gif') no-repeat 190px 77px;
+}
+.mylink_zoom {
+  background: url('../templates/zoom.gif') no-repeat;
+}
+.mylink_services {
+  font-size: 10px;
+  font-weight: normal;
+}
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/mylink/mylink.styl:end */
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/logo/logo.styl:begin */
+.logo {
+  color: #26606d;
+  width: 220px;
+  height: 44px;
+  background: url('../templates/logo.png') no-repeat;
+  position: absolute;
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/logo/logo.styl:end */
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/auth/auth.styl:begin */
+.auth__name {
+  font: 27px Georgia;
+  color: #497f35;
+  padding-bottom: 9px;
+}
+.auth__label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.auth__input {
+  border: 0;
+  color: #bb9d59;
+  font-size: 10px;
+  background-color: #f9f6d4;
+  width: 161px;
+  height: 21px;
+  padding: 0px 10px;
+  margin-right: 25px;
+}
+.auth__submit {
+  font-size: 16px;
+  color: #ab8e4e;
+  padding-top: 16px;
+}
+.auth__submit-btn {
+  width: 67px;
+  height: 20px;
+  position: relative;
+  left: 16px;
+  top: -2px;
+}
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/auth/auth.styl:end */
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/btn/btn.styl:begin */
+.btn {
+  color: #943415;
+  font-size: 11px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background: #fff;
+  background-image: linear-gradient(to top, #fff 0%, #ededed 49%, #f3f3f3 50%, #fff 100%);
+}
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/btn/btn.styl:end */
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/content/content.styl:begin */
+.content {
+  padding: 37px 0px 32px 0px;
+  max-width: 1131px;
+  margin: 0px auto;
+}
+.content:before,
+.content:after {
+  content: " ";
+  display: table;
+}
+.content:after {
+  clear: both;
+}
+.content__layout {
+  float: left;
+  width: 100%;
+  margin-right: -298px;
+}
+.content__fluid-col {
+  margin-right: 334px;
+}
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/content/content.styl:end */
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/article/article.styl:begin */
+.article {
+  padding-bottom: 35px;
+}
+.article__title {
+  padding-bottom: 8px;
+  font: 30px Georgia;
+  color: #0b636b;
+}
+.article__header {
+  padding-bottom: 6px;
+  font: 18px Georgia;
+  color: #943415;
+}
+.article__text {
+  line-height: 16px;
+}
+.article__text strong {
+  font-weight: bold;
+}
+.article__info {
+  margin-top: 38px;
+}
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/article/article.styl:end */
+/* /Users/oozywaters/Sites/Brandname/libs/bem-components/common.blocks/icon/icon.styl:begin */
+.icon {
+  display: inline-block;
+  text-align: center;
+  background: 50% no-repeat;
+/* Hack for correct baseline positioning */
+/*
+     * Чтобы иконка правильно позиционировалась внутри блочного контекста,
+     * нужно прописать родителю свойство line-height со значением, равным высоте иконки
+     */
+}
+.icon:empty:after {
+  visibility: hidden;
+  content: '\00A0';
+}
+.icon .image {
+  margin: -5.18em 0 -5em;
+/* 0.18 — magic number, empirically found */
+  vertical-align: middle;
+}
+/* /Users/oozywaters/Sites/Brandname/libs/bem-components/common.blocks/icon/icon.styl:end */
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/icon/icon.styl:begin */
+.icon_cal {
+  background: url('../templates/icon_cal.png') no-repeat;
+  width: 15px;
+  height: 16px;
+}
+.icon_pen {
+  background: url('../templates/icon_pen.png') no-repeat;
+  width: 15px;
+  height: 15px;
+}
+.icon_zoom {
+  width: 8px;
+  height: 8px;
+  background: url('../templates/icon_zoom.gif') no-repeat;
+}
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/icon/icon.styl:end */
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/content-info/content-info.styl:begin */
+.content-info {
+  height: 29px;
+  width: 100%;
+  background-color: #f9f6d4;
+  display: table;
+}
+.content-info__item {
+  font-size: 11px;
+  font-weight: bold;
+  float: left;
+  vertical-align: middle;
+  padding: 6px 7px 0px 11px;
+  background: url('../templates/content-info__sep.gif') no-repeat 0px 8px;
+}
+.content-info__item:first-child {
+  background: none;
+}
+.content-info__item .icon {
+  padding-top: 3px;
+  padding-right: 10px;
+}
+.content-info__item_type_author {
+  font-size: 11px;
+  font-weight: normal;
+  color: #84733d;
+}
+.content-info_blockquote {
+  background: none;
+}
+.content-info_blockquote .content-info__item {
+  padding-left: 0px;
+}
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/content-info/content-info.styl:end */
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/services/services.styl:begin */
+.services {
+  padding-bottom: 36px;
+}
+.services:before,
+.services:after {
+  content: " ";
+  display: table;
+}
+.services:after {
+  clear: both;
+}
+.services strong {
+  font-weight: bold;
+}
+.services__header {
+  margin-bottom: 30px;
+}
+.services__frame {
+  float: left;
+  margin: -20px 20px 0px -5px;
+}
+.services__list {
+  padding: 18px 0px;
+}
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/services/services.styl:end */
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/frame/frame.styl:begin */
+.frame {
+  width: 194px;
+  height: 211px;
+  background: url('../templates/frame_bg.png') no-repeat;
+  position: relative;
+}
+.frame__img {
+  margin-bottom: 4px;
+  border: 3px solid #a79454;
+}
+.frame__label {
+  position: absolute;
+  top: 42px;
+  left: 30px;
+  width: 124px;
+}
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/frame/frame.styl:end */
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/mylist/mylist.styl:begin */
+.mylist__item_active .mylist__link,
+.mylist__link:hover {
+  color: #943415;
+  font-weight: bold;
+}
+.mylist__header {
+  padding-bottom: 8px;
+}
+.mylist__item {
+  overflow: auto;
+  list-style: none;
+  padding: 4px 0px;
+  background: url('../templates/list-sep.gif') repeat-x top left;
+}
+.mylist__item:first-child {
+  background: none;
+}
+.mylist__link {
+  color: #bb9d59;
+  text-decoration: none;
+  padding-left: 10px;
+  background: url('../templates/arrow.gif') no-repeat 0px 5px;
+}
+.mylist_services .mylist__header {
+  font: 18px Georgia;
+  padding-bottom: 3px;
+  color: #5c4527;
+}
+.mylist_services .mylist__item {
+  background: url('../templates/mylist_services-sep.gif') repeat-x top left;
+}
+.mylist_services .mylist__item:first-child {
+  background: none;
+}
+.mylist_services .mylist__link {
+  background: url('../templates/zoom.png') no-repeat 0px 3px;
+  color: #943415;
+  font-weight: bold;
+  font-size: 11px;
+  padding: 0px 0px 0px 18px;
+}
+.mylist_services .mylist__link:hover {
+  text-decoration: underline;
+}
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/mylist/mylist.styl:end */
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/heading/heading.styl:begin */
+.heading {
+  color: #0b636b;
+}
+.heading_size_h1 {
+  font: 30px Georgia;
+}
+.heading_size_h3 {
+  font: 24px Georgia;
+}
+.heading_size_h3-2 {
+  font: 24px Georgia;
+  color: #2c787b;
+}
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/heading/heading.styl:end */
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/testimonial/testimonial.styl:begin */
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/testimonial/testimonial.styl:end */
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/blockquote/blockquote.styl:begin */
+.blockquote {
+  padding-bottom: 10px;
+}
+.blockquote__content {
+  background: url('../templates/quotes.png') no-repeat 4px 15px;
+  text-indent: 22px;
+  padding-top: 15px;
+  line-height: 17px;
+}
+.blockquote__content strong {
+  font-weight: bold;
+}
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/blockquote/blockquote.styl:end */
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/sidebar/sidebar.styl:begin */
+.sidebar {
+  padding-top: 6px;
+  float: right;
+  background: url('../templates/sidebar__bg_left.jpg') no-repeat;
+  width: 262px;
+  min-height: 750px;
+  padding-left: 36px;
+}
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/sidebar/sidebar.styl:end */
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/photo-stock/photo-stock.styl:begin */
+.photo-stock {
+  color: #f00;
+}
+.photo-stock__header {
+  padding-bottom: 19px;
+}
+.photo-stock__list {
+  list-style: none;
+  padding-bottom: 10px;
+}
+.photo-stock__item {
+  padding-bottom: 16px;
+}
+.photo-stock__item-link {
+  display: block;
+  text-align: right;
+}
+.photo-stock__item-img {
+  display: block;
+  border: 3px solid #d3cfa3;
+  margin-right: 0;
+  margin-bottom: 7px;
+}
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/photo-stock/photo-stock.styl:end */
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/qcontact/qcontact.styl:begin */
+.qcontact {
+  padding-bottom: 30px;
+}
+.qcontact__header {
+  padding-bottom: 9px;
+}
+.qcontact__input-group {
+  text-align: right;
+  font-weight: bold;
+  line-height: 32px;
+}
+.qcontact__label {
+  float: left;
+}
+.qcontact__input {
+  width: 216px;
+  height: 18px;
+  border: 1px solid #d3cfa3;
+  background-color: #f8f5d2;
+  font-size: 10px;
+  color: back;
+  text-indent: 5px;
+}
+.qcontact__input-btns {
+  padding-top: 10px;
+  padding-left: 42px;
+}
+.qcontact__button {
+  width: 94px;
+  height: 19px;
+  margin-left: 8px;
+}
+.qcontact__button:first-child {
+  margin: 0;
+}
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/qcontact/qcontact.styl:end */
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/footer/footer.styl:begin */
+.footer {
+  height: 104px;
+  padding-top: 31px;
+  text-align: center;
+  min-width: 1000px;
+  position: relative;
+  background: url('../templates/footer_line.png') no-repeat top center;
+}
+.footer__copyright {
+  padding: 4px 0px;
+}
+.footer__designby {
+  font-size: 11px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+.footer__valid-link {
+  display: inline-block;
+  verticat-align: center;
+  text-decoration: none;
+  margin-left: 5px;
+  width: 60px;
+  height: 15px;
+}
+.footer__valid-link:first-child {
+  margin-left: 0;
+}
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/footer/footer.styl:end */
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/page/page.styl:begin */
 html,
 body,
 div,
@@ -110,512 +617,4 @@ a img {
   z-index: -1;
   background: url('../templates/bg__pic.jpg') no-repeat top left;
 }
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/page/page.styl:end */
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/header/header.styl:begin */
-.header {
-  position: relative;
-  height: 452px;
-}
-.header__menu {
-  position: absolute;
-  top: 32px;
-  right: 15px;
-}
-.header__logo {
-  position: absolute;
-  top: 75px;
-  right: 208px;
-}
-.header__auth {
-  position: absolute;
-  top: 147px;
-  right: 16px;
-}
-.header__slogan {
-  font: 28px Georgia;
-  line-height: 30px;
-  text-align: center;
-  padding: 0px 98px;
-  color: #497f35;
-  position: absolute;
-  bottom: 1px;
-  left: 0px;
-}
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/header/header.styl:end */
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/nav/nav.styl:begin */
-.nav {
-  list-style: none;
-  font-weight: bold;
-}
-.nav__item {
-  display: inline-block;
-  padding: 2px 2px 0px 10px;
-  height: 19px;
-  background: url('../templates/menu_active.png') no-repeat 0px -38px;
-}
-.nav__item:first-child {
-  background: none;
-}
-.nav__link {
-  color: #45ada9;
-  padding: 2px 6px 1px 0px;
-  text-decoration: none;
-}
-.nav__item_active:first-child,
-nav__item:first-child:hover {
-  padding-left: 9px;
-  background: url('../templates/menu_active.png') no-repeat -1px -19px !important;
-}
-.nav_top .nav__item_active,
-.nav_top .nav__item:hover {
-  padding-top: 0px;
-  background-position: 0px -19px;
-}
-.nav_top .nav__item_active .nav__link,
-.nav_top .nav__item:hover .nav__link {
-  color: #943415;
-  display: block;
-  height: 16px;
-  background: url('../templates/menu_active.png') no-repeat right 0px;
-}
-.nav_bottom .nav__item {
-  background: url('../templates/nav_bottom_sep.gif') no-repeat 0px 2px;
-  padding: 0px 7px;
-}
-.nav_bottom .nav__item:first-child {
-  background: none;
-}
-.nav_bottom .nav__item .nav__link {
-  padding: 0;
-}
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/nav/nav.styl:end */
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/mylink/mylink.styl:begin */
-.mylink {
-  font: 11px Arial;
-  font-weight: bold;
-  color: #943415;
-  text-decoration: none;
-}
-.mylink:hover {
-  text-decoration: underline;
-}
-.mylink_size_large {
-  font-size: 16px;
-  font-weight: normal;
-}
-.mylink_pszoom {
-  background: url('../templates/zoom.gif') no-repeat 190px 77px;
-}
-.mylink_zoom {
-  background: url('../templates/zoom.gif') no-repeat;
-}
-.mylink_services {
-  font-size: 10px;
-  font-weight: normal;
-}
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/mylink/mylink.styl:end */
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/logo/logo.styl:begin */
-.logo {
-  color: #26606d;
-  width: 220px;
-  height: 44px;
-  background: url('../templates/logo.png') no-repeat;
-  position: absolute;
-  font: 0/0 a;
-  color: transparent;
-  text-shadow: none;
-  background-color: transparent;
-  border: 0;
-}
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/logo/logo.styl:end */
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/auth/auth.styl:begin */
-.auth__name {
-  font: 27px Georgia;
-  color: #497f35;
-  padding-bottom: 9px;
-}
-.auth__label {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-.auth__input {
-  border: 0;
-  color: #bb9d59;
-  font-size: 10px;
-  background-color: #f9f6d4;
-  width: 161px;
-  height: 21px;
-  padding: 0px 10px;
-  margin-right: 25px;
-}
-.auth__submit {
-  font-size: 16px;
-  color: #ab8e4e;
-  padding-top: 16px;
-}
-.auth__submit-btn {
-  width: 67px;
-  height: 20px;
-  position: relative;
-  left: 16px;
-  top: -2px;
-}
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/auth/auth.styl:end */
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/btn/btn.styl:begin */
-.btn {
-  color: #943415;
-  font-size: 11px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  background: #fff;
-  background-image: -webkit-linear-gradient(bottom, #fff 0%, #ededed 49%, #f3f3f3 50%, #fff 100%);
-  background-image: linear-gradient(to top, #fff 0%, #ededed 49%, #f3f3f3 50%, #fff 100%);
-}
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/btn/btn.styl:end */
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/content/content.styl:begin */
-.content {
-  padding: 37px 0px 32px 0px;
-  max-width: 1131px;
-  margin: 0px auto;
-}
-.content:before,
-.content:after {
-  content: " ";
-  display: table;
-}
-.content:after {
-  clear: both;
-}
-.content__layout {
-  float: left;
-  width: 100%;
-  margin-right: -298px;
-}
-.content__fluid-col {
-  margin-right: 334px;
-}
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/content/content.styl:end */
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/article/article.styl:begin */
-.article {
-  padding-bottom: 35px;
-}
-.article__title {
-  padding-bottom: 8px;
-  font: 30px Georgia;
-  color: #0b636b;
-}
-.article__header {
-  padding-bottom: 6px;
-  font: 18px Georgia;
-  color: #943415;
-}
-.article__text {
-  line-height: 16px;
-}
-.article__text strong {
-  font-weight: bold;
-}
-.article__info {
-  margin-top: 38px;
-}
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/article/article.styl:end */
-/* /Users/oozywaters/Sites/project-stub/libs/bem-components/common.blocks/icon/icon.styl:begin */
-.icon {
-  display: inline-block;
-  text-align: center;
-  background: 50% no-repeat;
-/* Hack for correct baseline positioning */
-/*
-     * Чтобы иконка правильно позиционировалась внутри блочного контекста,
-     * нужно прописать родителю свойство line-height со значением, равным высоте иконки
-     */
-}
-.icon:empty:after {
-  visibility: hidden;
-  content: '\00A0';
-}
-.icon .image {
-  margin: -5.18em 0 -5em;
-/* 0.18 — magic number, empirically found */
-  vertical-align: middle;
-}
-/* /Users/oozywaters/Sites/project-stub/libs/bem-components/common.blocks/icon/icon.styl:end */
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/icon/icon.styl:begin */
-.icon_cal {
-  background: url('../templates/icon_cal.png') no-repeat;
-  width: 15px;
-  height: 16px;
-}
-.icon_pen {
-  background: url('../templates/icon_pen.png') no-repeat;
-  width: 15px;
-  height: 15px;
-}
-.icon_zoom {
-  width: 8px;
-  height: 8px;
-  background: url('../templates/icon_zoom.gif') no-repeat;
-}
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/icon/icon.styl:end */
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/content-info/content-info.styl:begin */
-.content-info {
-  height: 29px;
-  width: 100%;
-  background-color: #f9f6d4;
-  display: table;
-}
-.content-info__item {
-  font-size: 11px;
-  font-weight: bold;
-  float: left;
-  vertical-align: middle;
-  padding: 6px 7px 0px 11px;
-  background: url('../templates/content-info__sep.gif') no-repeat 0px 8px;
-}
-.content-info__item:first-child {
-  background: none;
-}
-.content-info__item .icon {
-  padding-top: 3px;
-  padding-right: 10px;
-}
-.content-info__item_type_author {
-  font-size: 11px;
-  font-weight: normal;
-  color: #84733d;
-}
-.content-info_blockquote {
-  background: none;
-}
-.content-info_blockquote .content-info__item {
-  padding-left: 0px;
-}
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/content-info/content-info.styl:end */
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/services/services.styl:begin */
-.services {
-  padding-bottom: 36px;
-}
-.services:before,
-.services:after {
-  content: " ";
-  display: table;
-}
-.services:after {
-  clear: both;
-}
-.services strong {
-  font-weight: bold;
-}
-.services__header {
-  margin-bottom: 30px;
-}
-.services__frame {
-  float: left;
-  margin: -20px 20px 0px -5px;
-}
-.services__list {
-  padding: 18px 0px;
-}
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/services/services.styl:end */
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/frame/frame.styl:begin */
-.frame {
-  width: 194px;
-  height: 211px;
-  background: url('../templates/frame_bg.png') no-repeat;
-  position: relative;
-}
-.frame__img {
-  margin-bottom: 4px;
-  border: 3px solid #a79454;
-}
-.frame__label {
-  position: absolute;
-  top: 42px;
-  left: 30px;
-  width: 124px;
-}
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/frame/frame.styl:end */
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/mylist/mylist.styl:begin */
-.mylist__item_active .mylist__link,
-.mylist__link:hover {
-  color: #943415;
-  font-weight: bold;
-}
-.mylist__header {
-  padding-bottom: 8px;
-}
-.mylist__item {
-  overflow: auto;
-  list-style: none;
-  padding: 4px 0px;
-  background: url('../templates/list-sep.gif') repeat-x top left;
-}
-.mylist__item:first-child {
-  background: none;
-}
-.mylist__link {
-  color: #bb9d59;
-  text-decoration: none;
-  padding-left: 10px;
-  background: url('../templates/arrow.gif') no-repeat 0px 5px;
-}
-.mylist_services .mylist__header {
-  font: 18px Georgia;
-  padding-bottom: 3px;
-  color: #5c4527;
-}
-.mylist_services .mylist__item {
-  background: url('../templates/mylist_services-sep.gif') repeat-x top left;
-}
-.mylist_services .mylist__item:first-child {
-  background: none;
-}
-.mylist_services .mylist__link {
-  background: url('../templates/zoom.png') no-repeat 0px 3px;
-  color: #943415;
-  font-weight: bold;
-  font-size: 11px;
-  padding: 0px 0px 0px 18px;
-}
-.mylist_services .mylist__link:hover {
-  text-decoration: underline;
-}
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/mylist/mylist.styl:end */
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/heading/heading.styl:begin */
-.heading {
-  color: #0b636b;
-}
-.heading_size_h1 {
-  font: 30px Georgia;
-}
-.heading_size_h3 {
-  font: 24px Georgia;
-}
-.heading_size_h3-2 {
-  font: 24px Georgia;
-  color: #2c787b;
-}
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/heading/heading.styl:end */
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/testimonial/testimonial.styl:begin */
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/testimonial/testimonial.styl:end */
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/blockquote/blockquote.styl:begin */
-.blockquote {
-  padding-bottom: 10px;
-}
-.blockquote__content {
-  background: url('../templates/quotes.png') no-repeat 4px 15px;
-  text-indent: 22px;
-  padding-top: 15px;
-  line-height: 17px;
-}
-.blockquote__content strong {
-  font-weight: bold;
-}
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/blockquote/blockquote.styl:end */
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/sidebar/sidebar.styl:begin */
-.sidebar {
-  padding-top: 6px;
-  float: right;
-  background: url('../templates/sidebar__bg_left.jpg') no-repeat;
-  width: 262px;
-  min-height: 750px;
-  padding-left: 36px;
-}
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/sidebar/sidebar.styl:end */
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/photo-stock/photo-stock.styl:begin */
-.photo-stock {
-  color: #f00;
-}
-.photo-stock__header {
-  padding-bottom: 19px;
-}
-.photo-stock__list {
-  list-style: none;
-  padding-bottom: 10px;
-}
-.photo-stock__item {
-  padding-bottom: 16px;
-}
-.photo-stock__item-link {
-  display: block;
-  text-align: right;
-}
-.photo-stock__item-img {
-  display: block;
-  border: 3px solid #d3cfa3;
-  margin-right: 0;
-  margin-bottom: 7px;
-}
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/photo-stock/photo-stock.styl:end */
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/qcontact/qcontact.styl:begin */
-.qcontact {
-  padding-bottom: 30px;
-}
-.qcontact__header {
-  padding-bottom: 9px;
-}
-.qcontact__input-group {
-  text-align: right;
-  font-weight: bold;
-  line-height: 32px;
-}
-.qcontact__label {
-  float: left;
-}
-.qcontact__input {
-  width: 216px;
-  height: 18px;
-  border: 1px solid #d3cfa3;
-  background-color: #f8f5d2;
-  font-size: 10px;
-  color: back;
-  text-indent: 5px;
-}
-.qcontact__input-btns {
-  padding-top: 10px;
-  padding-left: 42px;
-}
-.qcontact__button {
-  width: 94px;
-  height: 19px;
-  margin-left: 8px;
-}
-.qcontact__button:first-child {
-  margin: 0;
-}
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/qcontact/qcontact.styl:end */
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/footer/footer.styl:begin */
-.footer {
-  height: 104px;
-  padding-top: 31px;
-  text-align: center;
-  min-width: 1000px;
-  position: relative;
-  background: url('../templates/footer_line.png') no-repeat top center;
-}
-.footer__copyright {
-  padding: 4px 0px;
-}
-.footer__designby {
-  font-size: 11px;
-  font-weight: bold;
-  padding-bottom: 10px;
-}
-.footer__valid-link {
-  display: inline-block;
-  verticat-align: center;
-  text-decoration: none;
-  margin-left: 5px;
-  width: 60px;
-  height: 15px;
-}
-.footer__valid-link:first-child {
-  margin-left: 0;
-}
-/* /Users/oozywaters/Sites/project-stub/desktop.blocks/footer/footer.styl:end */
+/* /Users/oozywaters/Sites/Brandname/desktop.blocks/page/page.styl:end */

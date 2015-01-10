@@ -438,6 +438,57 @@ function applyc(__$ctx, __$ref) {
     if (__$t === "content") {
         var __$r = __$g0(__$ctx, __$ref);
         if (__$r !== __$ref) return __$r;
+    } else if (__$t === "attrs") {
+        var __$t = $$block;
+        if (__$t === "page") {
+            var __$t = $$elem;
+            if (__$t === "favicon") {
+                return {
+                    rel: "shortcut icon",
+                    href: __$ctx.ctx.url
+                };
+            } else if (__$t === "js") {
+                if (__$ctx.ctx.url) {
+                    return {
+                        src: __$ctx.ctx.url
+                    };
+                }
+            } else if (__$t === "css") {
+                if (__$ctx.ctx.url) {
+                    return {
+                        rel: "stylesheet",
+                        href: __$ctx.ctx.url
+                    };
+                }
+            }
+        } else if (__$t === "qcontact") {
+            if (!$$elem) {
+                return {
+                    method: "post",
+                    action: "#"
+                };
+            }
+        } else if (__$t === "icon") {
+            if (!$$elem && __$ctx.ctx.url) {
+                return {
+                    style: "background-image:url(" + __$ctx.ctx.url + ")"
+                };
+            }
+        } else if (__$t === "auth") {
+            if (!$$elem) {
+                return {
+                    method: "post",
+                    action: "#"
+                };
+            }
+        } else if (__$t === "mylink") {
+            if (!$$elem) {
+                return {
+                    href: "#"
+                };
+            }
+        }
+        return undefined;
     } else if (__$t === "tag") {
         var __$mr = __$m1[$$block];
         if (__$mr) {
@@ -445,6 +496,54 @@ function applyc(__$ctx, __$ref) {
             if (__$mr !== __$ref) return __$mr;
         }
         return undefined;
+    } else if (__$t === "bem") {
+        var __$t = $$block;
+        if (__$t === "page") {
+            var __$t = $$elem;
+            if (__$t === "head") {
+                return false;
+            } else if (__$t === "favicon") {
+                return false;
+            } else if (__$t === "link") {
+                return false;
+            } else if (__$t === "meta") {
+                return false;
+            } else if (__$t === "js") {
+                return false;
+            } else if (__$t === "css") {
+                return false;
+            }
+        } else if (__$t === "ua") {
+            if (!$$elem) {
+                return false;
+            }
+        }
+        return undefined;
+    } else if (__$t === "default") {
+        var __$t = $$block;
+        if (__$t === "page") {
+            if (!$$elem && !__$ctx._defPageApplied && (__$ctx.__$a0 & 4) === 0) {
+                var __$r = __$b38(__$ctx, __$ref);
+                if (__$r !== __$ref) return __$r;
+            }
+            var __$t = $$elem;
+            if (__$t === "css") {
+                var __$t = !__$ctx.ctx._ieCommented;
+                if (__$t) {
+                    var __$t = __$ctx.ctx.hasOwnProperty("ie");
+                    if (__$t) {
+                        if (__$ctx.ctx.ie === true && (__$ctx.__$a0 & 8) === 0) {
+                            var __$r = __$b39(__$ctx, __$ref);
+                            if (__$r !== __$ref) return __$r;
+                        }
+                        var __$r = __$b40(__$ctx, __$ref);
+                        if (__$r !== __$ref) return __$r;
+                    }
+                }
+            }
+        }
+        var __$r = __$b41(__$ctx, __$ref);
+        if (__$r !== __$ref) return __$r;
     } else if (__$t === "mix") {
         var __$t = $$block;
         if (__$t === "qcontact") {
@@ -524,107 +623,8 @@ function applyc(__$ctx, __$ref) {
             }
         }
         return undefined;
-    } else if (__$t === "attrs") {
-        var __$t = $$block;
-        if (__$t === "qcontact") {
-            if (!$$elem) {
-                return {
-                    method: "post",
-                    action: "#"
-                };
-            }
-        } else if (__$t === "icon") {
-            if (!$$elem && __$ctx.ctx.url) {
-                return {
-                    style: "background-image:url(" + __$ctx.ctx.url + ")"
-                };
-            }
-        } else if (__$t === "auth") {
-            if (!$$elem) {
-                return {
-                    method: "post",
-                    action: "#"
-                };
-            }
-        } else if (__$t === "mylink") {
-            if (!$$elem) {
-                return {
-                    href: "#"
-                };
-            }
-        } else if (__$t === "page") {
-            var __$t = $$elem;
-            if (__$t === "js") {
-                if (__$ctx.ctx.url) {
-                    return {
-                        src: __$ctx.ctx.url
-                    };
-                }
-            } else if (__$t === "css") {
-                if (__$ctx.ctx.url) {
-                    return {
-                        rel: "stylesheet",
-                        href: __$ctx.ctx.url
-                    };
-                }
-            } else if (__$t === "favicon") {
-                return {
-                    rel: "shortcut icon",
-                    href: __$ctx.ctx.url
-                };
-            }
-        }
-        return undefined;
     } else if (__$t === "js") {
         return undefined;
-    } else if (__$t === "bem") {
-        var __$t = $$block;
-        if (__$t === "page") {
-            var __$t = $$elem;
-            if (__$t === "link") {
-                return false;
-            } else if (__$t === "js") {
-                return false;
-            } else if (__$t === "css") {
-                return false;
-            } else if (__$t === "head") {
-                return false;
-            } else if (__$t === "favicon") {
-                return false;
-            } else if (__$t === "meta") {
-                return false;
-            }
-        } else if (__$t === "ua") {
-            if (!$$elem) {
-                return false;
-            }
-        }
-        return undefined;
-    } else if (__$t === "default") {
-        var __$t = $$block;
-        if (__$t === "page") {
-            var __$t = $$elem;
-            if (__$t === "css") {
-                var __$t = !__$ctx.ctx._ieCommented;
-                if (__$t) {
-                    var __$t = __$ctx.ctx.hasOwnProperty("ie");
-                    if (__$t) {
-                        if (__$ctx.ctx.ie === true && (__$ctx.__$a0 & 1) === 0) {
-                            var __$r = __$b50(__$ctx, __$ref);
-                            if (__$r !== __$ref) return __$r;
-                        }
-                        var __$r = __$b51(__$ctx, __$ref);
-                        if (__$r !== __$ref) return __$r;
-                    }
-                }
-            }
-            if (!$$elem && !__$ctx._defPageApplied && (__$ctx.__$a0 & 8) === 0) {
-                var __$r = __$b52(__$ctx, __$ref);
-                if (__$r !== __$ref) return __$r;
-            }
-        }
-        var __$r = __$b53(__$ctx, __$ref);
-        if (__$r !== __$ref) return __$r;
     } else if (__$t === "cls") {
         return undefined;
     } else if (__$t === "") {
@@ -822,9 +822,9 @@ function applyc(__$ctx, __$ref) {
     fn(exports, this);
 }, {
     recordExtensions: function(ctx) {
+        ctx["__$a0"] = 0;
         ctx["_mode"] = undefined;
         ctx["ctx"] = undefined;
-        ctx["__$a0"] = 0;
         ctx["_ieCommented"] = undefined;
         ctx["_str"] = undefined;
         ctx["block"] = undefined;
@@ -842,6 +842,31 @@ function applyc(__$ctx, __$ref) {
 });
 
 var __$m1 = {
+    page: function(__$ctx, __$ref) {
+        var __$t = $$elem;
+        if (__$t === "head") {
+            return "head";
+        } else if (__$t === "favicon") {
+            return "link";
+        } else if (__$t === "link") {
+            return "link";
+        } else if (__$t === "meta") {
+            return "meta";
+        }
+        if (!$$elem) {
+            return "body";
+        }
+        var __$t = $$elem;
+        if (__$t === "js") {
+            return "script";
+        } else if (__$t === "css") {
+            if (__$ctx.ctx.url) {
+                return "link";
+            }
+            return "style";
+        }
+        return __$ref;
+    },
     footer: function(__$ctx, __$ref) {
         if (!$$elem) {
             return "footer";
@@ -986,36 +1011,13 @@ var __$m1 = {
     },
     nav: function(__$ctx, __$ref) {
         var __$t = $$elem;
-        if (__$t === "item") {
-            return "li";
-        } else if (__$t === "link") {
+        if (__$t === "link") {
             return "a";
+        } else if (__$t === "item") {
+            return "li";
         }
         if (!$$elem) {
             return "ul";
-        }
-        return __$ref;
-    },
-    page: function(__$ctx, __$ref) {
-        var __$t = $$elem;
-        if (__$t === "link") {
-            return "link";
-        } else if (__$t === "js") {
-            return "script";
-        } else if (__$t === "css") {
-            if (__$ctx.ctx.url) {
-                return "link";
-            }
-            return "style";
-        } else if (__$t === "head") {
-            return "head";
-        } else if (__$t === "favicon") {
-            return "link";
-        } else if (__$t === "meta") {
-            return "meta";
-        }
-        if (!$$elem) {
-            return "body";
         }
         return __$ref;
     },
@@ -1027,10 +1029,10 @@ var __$m1 = {
     }
 };
 
-function __$b1(__$ctx, __$ref) {
-    var content__$0 = [];
+function __$b3(__$ctx, __$ref) {
+    var content__$14 = [];
     __$ctx.ctx.links.forEach(function(link) {
-        content__$0.push({
+        content__$14.push({
             elem: "valid-link",
             mix: {
                 block: "btn"
@@ -1042,12 +1044,12 @@ function __$b1(__$ctx, __$ref) {
             content: [ link, "<br>" ]
         });
     });
-    return content__$0;
+    return content__$14;
 }
 
-function __$b2(__$ctx, __$ref) {
-    var content__$1 = [];
-    content__$1.push({
+function __$b4(__$ctx, __$ref) {
+    var content__$15 = [];
+    content__$15.push({
         elem: "header",
         content: "Quick Contact"
     }, {
@@ -1102,17 +1104,17 @@ function __$b2(__$ctx, __$ref) {
             }
         } ]
     });
-    return content__$1;
+    return content__$15;
 }
 
-function __$b3(__$ctx, __$ref) {
-    var content__$2 = [], photolist__$3 = [];
-    content__$2.push({
+function __$b5(__$ctx, __$ref) {
+    var content__$16 = [], photolist__$17 = [];
+    content__$16.push({
         elem: "header",
         content: __$ctx.ctx.header
     });
     __$ctx.ctx.items.forEach(function(item) {
-        photolist__$3.push({
+        photolist__$17.push({
             elem: "item",
             content: [ {
                 elem: "item-link",
@@ -1134,16 +1136,16 @@ function __$b3(__$ctx, __$ref) {
             } ]
         });
     });
-    content__$2.push({
+    content__$16.push({
         elem: "list",
-        content: photolist__$3
+        content: photolist__$17
     });
-    return content__$2;
+    return content__$16;
 }
 
-function __$b4(__$ctx, __$ref) {
-    var content__$4 = [];
-    content__$4.push({
+function __$b6(__$ctx, __$ref) {
+    var content__$18 = [];
+    content__$18.push({
         elem: "content",
         content: __$ctx.ctx.content
     }, {
@@ -1156,57 +1158,57 @@ function __$b4(__$ctx, __$ref) {
             content: __$ctx.ctx.author
         } ]
     });
-    return content__$4;
+    return content__$18;
 }
 
-function __$b5(__$ctx, __$ref) {
-    var content__$5 = [];
-    content__$5.push({
+function __$b7(__$ctx, __$ref) {
+    var content__$19 = [];
+    content__$19.push({
         elem: "header",
         content: "Testimonial"
     }, __$ctx.ctx.content);
-    return content__$5;
+    return content__$19;
 }
 
-function __$b6(__$ctx, __$ref) {
-    var content__$6 = [];
-    var projectlist__$7 = [];
-    content__$6.push({
+function __$b8(__$ctx, __$ref) {
+    var content__$20 = [];
+    var projectlist__$21 = [];
+    content__$20.push({
         elem: "header",
         content: __$ctx.ctx.header
     });
     __$ctx.ctx.items.forEach(function(item) {
-        var tag__$8 = "a", attrs__$9 = {
+        var tag__$22 = "a", attrs__$23 = {
             href: item.url
-        }, mods__$10 = null;
+        }, mods__$24 = null;
         if (item.active === true) {
-            tag__$8 = "span";
-            attrs__$9 = null;
-            mods__$10 = {
+            tag__$22 = "span";
+            attrs__$23 = null;
+            mods__$24 = {
                 active: true
             };
         }
-        projectlist__$7.push({
+        projectlist__$21.push({
             elem: "item",
-            elemMods: mods__$10,
+            elemMods: mods__$24,
             content: [ {
                 elem: "link",
-                tag: tag__$8,
-                attrs: attrs__$9,
+                tag: tag__$22,
+                attrs: attrs__$23,
                 content: item.title
             } ]
         });
     });
-    content__$6.push({
+    content__$20.push({
         elem: "list",
-        content: projectlist__$7
+        content: projectlist__$21
     });
-    return content__$6;
+    return content__$20;
 }
 
-function __$b7(__$ctx, __$ref) {
-    var content__$11 = [];
-    content__$11.push({
+function __$b9(__$ctx, __$ref) {
+    var content__$25 = [];
+    content__$25.push({
         elem: "label",
         mix: {
             block: "mylink",
@@ -1224,14 +1226,14 @@ function __$b7(__$ctx, __$ref) {
             }
         }, __$ctx.ctx.label ]
     });
-    return content__$11;
+    return content__$25;
 }
 
-function __$b8(__$ctx, __$ref) {
-    var content__$12 = [];
-    var list_items__$13 = [];
+function __$b10(__$ctx, __$ref) {
+    var content__$26 = [];
+    var list_items__$27 = [];
     __$ctx.ctx.content.forEach(function(item) {
-        list_items__$13.push({
+        list_items__$27.push({
             elem: "dlist-desc",
             content: [ {
                 elem: "dlist-link",
@@ -1247,28 +1249,28 @@ function __$b8(__$ctx, __$ref) {
             } ]
         });
     });
-    content__$12.push({
+    content__$26.push({
         elem: "dlist-term",
         content: "Services"
-    }, list_items__$13);
-    return content__$12;
+    }, list_items__$27);
+    return content__$26;
 }
 
-function __$b9(__$ctx, __$ref) {
-    var content__$14 = [];
-    content__$14.push({
+function __$b11(__$ctx, __$ref) {
+    var content__$28 = [];
+    content__$28.push({
         elem: "header",
         content: __$ctx.ctx.title
     });
-    content__$14.push(__$ctx.ctx.content);
-    return content__$14;
+    content__$28.push(__$ctx.ctx.content);
+    return content__$28;
 }
 
-function __$b13(__$ctx, __$ref) {
-    var content__$15 = [];
-    var menu_items__$16 = [];
+function __$b15(__$ctx, __$ref) {
+    var content__$29 = [];
+    var menu_items__$30 = [];
     __$ctx.ctx.items.forEach(function(item) {
-        menu_items__$16.push({
+        menu_items__$30.push({
             elem: "item",
             elemMods: {
                 type: item.type
@@ -1276,27 +1278,27 @@ function __$b13(__$ctx, __$ref) {
             content: item.content
         });
     });
-    content__$15.push(menu_items__$16);
-    return content__$15;
+    content__$29.push(menu_items__$30);
+    return content__$29;
 }
 
-function __$b14(__$ctx, __$ref) {
-    var content__$17 = [];
-    var article_data__$18 = [];
-    var menu_items__$19 = [];
-    if (__$ctx.ctx.date) menu_items__$19.push({
+function __$b16(__$ctx, __$ref) {
+    var content__$31 = [];
+    var article_data__$32 = [];
+    var menu_items__$33 = [];
+    if (__$ctx.ctx.date) menu_items__$33.push({
         type: "date",
         content: __$ctx.ctx.date
     });
-    if (__$ctx.ctx.author) menu_items__$19.push({
+    if (__$ctx.ctx.author) menu_items__$33.push({
         type: "author",
         content: __$ctx.ctx.author
     });
-    menu_items__$19.push({
+    menu_items__$33.push({
         type: "more",
         content: "Read More"
     });
-    content__$17.push({
+    content__$31.push({
         elem: "title",
         content: __$ctx.ctx.title
     }, __$ctx.ctx.content, {
@@ -1305,14 +1307,14 @@ function __$b14(__$ctx, __$ref) {
             block: __$ctx.ctx.block,
             elem: "info"
         },
-        items: menu_items__$19
+        items: menu_items__$33
     });
-    return content__$17;
+    return content__$31;
 }
 
-function __$b15(__$ctx, __$ref) {
-    var content__$20 = [];
-    content__$20.push({
+function __$b17(__$ctx, __$ref) {
+    var content__$34 = [];
+    content__$34.push({
         elem: "name",
         content: "User Login"
     }, {
@@ -1367,13 +1369,13 @@ function __$b15(__$ctx, __$ref) {
             }
         } ]
     });
-    return content__$20;
+    return content__$34;
 }
 
-function __$b16(__$ctx, __$ref) {
-    var content__$21 = [];
+function __$b18(__$ctx, __$ref) {
+    var content__$35 = [];
     __$ctx.ctx.items.forEach(function(item) {
-        content__$21.push({
+        content__$35.push({
             elem: "item",
             elemMods: {
                 active: item.active
@@ -1387,58 +1389,17 @@ function __$b16(__$ctx, __$ref) {
             } ]
         });
     });
-    return content__$21;
+    return content__$35;
 }
 
-function __$b50(__$ctx, __$ref) {
-    var url__$22 = __$ctx.ctx.url;
-    var __$r__$24;
-    var __$l0__$25 = $$mode;
-    $$mode = "";
-    var __$l1__$26 = __$ctx.ctx;
-    __$ctx.ctx = [ 6, 7, 8, 9 ].map(function(v) {
-        return {
-            elem: "css",
-            url: url__$22 + ".ie" + v + ".css",
-            ie: "IE " + v
-        };
-    });
-    var __$r__$28;
-    var __$l2__$29 = __$ctx.__$a0;
-    __$ctx.__$a0 = __$ctx.__$a0 | 1;
-    __$r__$28 = applyc(__$ctx, __$ref);
-    __$ctx.__$a0 = __$l2__$29;
-    __$r__$24 = __$r__$28;
-    $$mode = __$l0__$25;
-    __$ctx.ctx = __$l1__$26;
-    return;
-}
-
-function __$b51(__$ctx, __$ref) {
-    var ie__$30 = __$ctx.ctx.ie, hideRule__$31 = !ie__$30 ? [ "gt IE 9", "<!-->", "<!--" ] : ie__$30 === "!IE" ? [ ie__$30, "<!-->", "<!--" ] : [ ie__$30, "", "" ];
-    var __$r__$33;
-    var __$l0__$34 = $$mode;
-    $$mode = "";
-    var __$l3__$35 = __$ctx.ctx;
-    var __$l1__$36 = __$l3__$35._ieCommented;
-    __$l3__$35._ieCommented = true;
-    var __$l2__$37 = __$ctx.ctx;
-    __$ctx.ctx = [ "<!--[if " + hideRule__$31[0] + "]>" + hideRule__$31[1], __$ctx.ctx, hideRule__$31[2] + "<![endif]-->" ];
-    __$r__$33 = applyc(__$ctx, __$ref);
-    $$mode = __$l0__$34;
-    __$l3__$35._ieCommented = __$l1__$36;
-    __$ctx.ctx = __$l2__$37;
-    return;
-}
-
-function __$b52(__$ctx, __$ref) {
+function __$b38(__$ctx, __$ref) {
     __$ctx._defPageApplied = true;
-    var ctx__$44 = __$ctx.ctx;
-    var __$r__$46;
-    var __$l0__$47 = $$mode;
+    var ctx__$6 = __$ctx.ctx;
+    var __$r__$8;
+    var __$l0__$9 = $$mode;
     $$mode = "";
-    var __$l1__$48 = __$ctx.ctx;
-    __$ctx.ctx = [ ctx__$44.doctype || "<!DOCTYPE html>", {
+    var __$l1__$10 = __$ctx.ctx;
+    __$ctx.ctx = [ ctx__$6.doctype || "<!DOCTYPE html>", {
         tag: "html",
         cls: "ua_js_no",
         content: [ {
@@ -1450,28 +1411,69 @@ function __$b52(__$ctx, __$ref) {
                 }
             }, {
                 tag: "title",
-                content: ctx__$44.title
+                content: ctx__$6.title
             }, {
                 block: "ua"
-            }, ctx__$44.head, ctx__$44.styles, ctx__$44.favicon ? {
+            }, ctx__$6.head, ctx__$6.styles, ctx__$6.favicon ? {
                 elem: "favicon",
-                url: ctx__$44.favicon
+                url: ctx__$6.favicon
             } : "" ]
-        }, ctx__$44 ]
+        }, ctx__$6 ]
     } ];
-    var __$r__$50;
-    var __$l2__$51 = __$ctx.__$a0;
-    __$ctx.__$a0 = __$ctx.__$a0 | 8;
-    __$r__$50 = applyc(__$ctx, __$ref);
-    __$ctx.__$a0 = __$l2__$51;
-    __$r__$46 = __$r__$50;
-    $$mode = __$l0__$47;
-    __$ctx.ctx = __$l1__$48;
+    var __$r__$12;
+    var __$l2__$13 = __$ctx.__$a0;
+    __$ctx.__$a0 = __$ctx.__$a0 | 4;
+    __$r__$12 = applyc(__$ctx, __$ref);
+    __$ctx.__$a0 = __$l2__$13;
+    __$r__$8 = __$r__$12;
+    $$mode = __$l0__$9;
+    __$ctx.ctx = __$l1__$10;
     __$ctx._defPageApplied = false;
     return;
 }
 
-function __$b53(__$ctx, __$ref) {
+function __$b39(__$ctx, __$ref) {
+    var url__$36 = __$ctx.ctx.url;
+    var __$r__$38;
+    var __$l0__$39 = $$mode;
+    $$mode = "";
+    var __$l1__$40 = __$ctx.ctx;
+    __$ctx.ctx = [ 6, 7, 8, 9 ].map(function(v) {
+        return {
+            elem: "css",
+            url: url__$36 + ".ie" + v + ".css",
+            ie: "IE " + v
+        };
+    });
+    var __$r__$42;
+    var __$l2__$43 = __$ctx.__$a0;
+    __$ctx.__$a0 = __$ctx.__$a0 | 8;
+    __$r__$42 = applyc(__$ctx, __$ref);
+    __$ctx.__$a0 = __$l2__$43;
+    __$r__$38 = __$r__$42;
+    $$mode = __$l0__$39;
+    __$ctx.ctx = __$l1__$40;
+    return;
+}
+
+function __$b40(__$ctx, __$ref) {
+    var ie__$44 = __$ctx.ctx.ie, hideRule__$45 = !ie__$44 ? [ "gt IE 9", "<!-->", "<!--" ] : ie__$44 === "!IE" ? [ ie__$44, "<!-->", "<!--" ] : [ ie__$44, "", "" ];
+    var __$r__$47;
+    var __$l0__$48 = $$mode;
+    $$mode = "";
+    var __$l3__$49 = __$ctx.ctx;
+    var __$l1__$50 = __$l3__$49._ieCommented;
+    __$l3__$49._ieCommented = true;
+    var __$l2__$51 = __$ctx.ctx;
+    __$ctx.ctx = [ "<!--[if " + hideRule__$45[0] + "]>" + hideRule__$45[1], __$ctx.ctx, hideRule__$45[2] + "<![endif]-->" ];
+    __$r__$47 = applyc(__$ctx, __$ref);
+    $$mode = __$l0__$48;
+    __$l3__$49._ieCommented = __$l1__$50;
+    __$ctx.ctx = __$l2__$51;
+    return;
+}
+
+function __$b41(__$ctx, __$ref) {
     var _this__$52 = __$ctx, BEM_INTERNAL__$53 = _this__$52.BEM.INTERNAL, ctx__$54 = __$ctx.ctx, isBEM__$55, tag__$56, res__$57;
     var __$r__$59;
     var __$l0__$60 = __$ctx._str;
@@ -1709,48 +1711,75 @@ function __$b59(__$ctx, __$ref) {
 
 function __$g0(__$ctx, __$ref) {
     var __$t = $$block;
-    if (__$t === "footer") {
+    if (__$t === "page") {
+        if ($$elem === "head" && (__$ctx.__$a0 & 1) === 0) {
+            return [ __$ctx.ctx["x-ua-compatible"] === false ? false : {
+                tag: "meta",
+                attrs: {
+                    "http-equiv": "X-UA-Compatible",
+                    content: __$ctx.ctx["x-ua-compatible"] || "IE=edge"
+                }
+            }, function __$lb__$0() {
+                var __$r__$1;
+                var __$l0__$2 = __$ctx.__$a0;
+                __$ctx.__$a0 = __$ctx.__$a0 | 1;
+                __$r__$1 = applyc(__$ctx, __$ref);
+                __$ctx.__$a0 = __$l0__$2;
+                return __$r__$1;
+            }() ];
+        }
+        if (!$$elem && (__$ctx.__$a0 & 2) === 0) {
+            return [ function __$lb__$3() {
+                var __$r__$4;
+                var __$l0__$5 = __$ctx.__$a0;
+                __$ctx.__$a0 = __$ctx.__$a0 | 2;
+                __$r__$4 = applyc(__$ctx, __$ref);
+                __$ctx.__$a0 = __$l0__$5;
+                return __$r__$4;
+            }(), __$ctx.ctx.scripts ];
+        }
+    } else if (__$t === "footer") {
         if ($$elem === "valid") {
-            var __$r = __$b1(__$ctx, __$ref);
+            var __$r = __$b3(__$ctx, __$ref);
             if (__$r !== __$ref) return __$r;
         }
     } else if (__$t === "qcontact") {
         if (!$$elem) {
-            var __$r = __$b2(__$ctx, __$ref);
+            var __$r = __$b4(__$ctx, __$ref);
             if (__$r !== __$ref) return __$r;
         }
     } else if (__$t === "photo-stock") {
         if (!$$elem) {
-            var __$r = __$b3(__$ctx, __$ref);
+            var __$r = __$b5(__$ctx, __$ref);
             if (__$r !== __$ref) return __$r;
         }
     } else if (__$t === "blockquote") {
         if (!$$elem) {
-            var __$r = __$b4(__$ctx, __$ref);
+            var __$r = __$b6(__$ctx, __$ref);
             if (__$r !== __$ref) return __$r;
         }
     } else if (__$t === "testimonial") {
         if (!$$elem) {
-            var __$r = __$b5(__$ctx, __$ref);
+            var __$r = __$b7(__$ctx, __$ref);
             if (__$r !== __$ref) return __$r;
         }
     } else if (__$t === "mylist") {
         if (!$$elem) {
-            var __$r = __$b6(__$ctx, __$ref);
+            var __$r = __$b8(__$ctx, __$ref);
             if (__$r !== __$ref) return __$r;
         }
     } else if (__$t === "frame") {
         if (!$$elem) {
-            var __$r = __$b7(__$ctx, __$ref);
+            var __$r = __$b9(__$ctx, __$ref);
             if (__$r !== __$ref) return __$r;
         }
     } else if (__$t === "services") {
         if ($$elem === "dlist") {
-            var __$r = __$b8(__$ctx, __$ref);
+            var __$r = __$b10(__$ctx, __$ref);
             if (__$r !== __$ref) return __$r;
         }
         if (!$$elem) {
-            var __$r = __$b9(__$ctx, __$ref);
+            var __$r = __$b11(__$ctx, __$ref);
             if (__$r !== __$ref) return __$r;
         }
     } else if (__$t === "content-info") {
@@ -1790,50 +1819,23 @@ function __$g0(__$ctx, __$ref) {
             }
         }
         if (!$$elem) {
-            var __$r = __$b13(__$ctx, __$ref);
+            var __$r = __$b15(__$ctx, __$ref);
             if (__$r !== __$ref) return __$r;
         }
     } else if (__$t === "article") {
         if (!$$elem) {
-            var __$r = __$b14(__$ctx, __$ref);
+            var __$r = __$b16(__$ctx, __$ref);
             if (__$r !== __$ref) return __$r;
         }
     } else if (__$t === "auth") {
         if (!$$elem) {
-            var __$r = __$b15(__$ctx, __$ref);
+            var __$r = __$b17(__$ctx, __$ref);
             if (__$r !== __$ref) return __$r;
         }
     } else if (__$t === "nav") {
         if (!$$elem) {
-            var __$r = __$b16(__$ctx, __$ref);
+            var __$r = __$b18(__$ctx, __$ref);
             if (__$r !== __$ref) return __$r;
-        }
-    } else if (__$t === "page") {
-        if ($$elem === "head" && (__$ctx.__$a0 & 2) === 0) {
-            return [ __$ctx.ctx["x-ua-compatible"] === false ? false : {
-                tag: "meta",
-                attrs: {
-                    "http-equiv": "X-UA-Compatible",
-                    content: __$ctx.ctx["x-ua-compatible"] || "IE=edge"
-                }
-            }, function __$lb__$38() {
-                var __$r__$39;
-                var __$l0__$40 = __$ctx.__$a0;
-                __$ctx.__$a0 = __$ctx.__$a0 | 2;
-                __$r__$39 = applyc(__$ctx, __$ref);
-                __$ctx.__$a0 = __$l0__$40;
-                return __$r__$39;
-            }() ];
-        }
-        if (!$$elem && (__$ctx.__$a0 & 4) === 0) {
-            return [ function __$lb__$41() {
-                var __$r__$42;
-                var __$l0__$43 = __$ctx.__$a0;
-                __$ctx.__$a0 = __$ctx.__$a0 | 4;
-                __$r__$42 = applyc(__$ctx, __$ref);
-                __$ctx.__$a0 = __$l0__$43;
-                return __$r__$42;
-            }(), __$ctx.ctx.scripts ];
         }
     } else if (__$t === "ua") {
         if (!$$elem) {
@@ -4956,69 +4958,6 @@ typeof jQuery !== 'undefined'?
 });
 
 /* end: ../../libs/bem-core/common.blocks/jquery/jquery.js */
-/* begin: ../../libs/bem-core/common.blocks/loader/_type/loader_type_js.js */
-/**
- * @module loader_type_js
- * @description Load JS from external URL.
- */
-
-modules.define('loader_type_js', function(provide) {
-
-var loading = {},
-    loaded = {},
-    head = document.getElementsByTagName('head')[0],
-    onLoad = function(path) {
-        loaded[path] = true;
-        var cbs = loading[path], cb, i = 0;
-        delete loading[path];
-        while(cb = cbs[i++]) {
-            cb();
-        }
-    };
-
-provide(
-    /**
-     * @exports
-     * @param {String} path resource link
-     * @param {Function} callback executes when resource is loaded
-     */
-    function(path, cb) {
-        if(loaded[path]) {
-            cb();
-            return;
-        }
-
-        if(loading[path]) {
-            loading[path].push(cb);
-            return;
-        }
-
-        loading[path] = [cb];
-
-        var script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.charset = 'utf-8';
-        script.src = (location.protocol === 'file:' && !path.indexOf('//')? 'http:' : '') + path;
-        script.onreadystatechange === null?
-            script.onreadystatechange = function() {
-                var readyState = this.readyState;
-                if(readyState === 'loaded' || readyState === 'complete') {
-                    script.onreadystatechange = null;
-                    onLoad(path);
-                }
-            } :
-            script.onload = script.onerror = function() {
-                script.onload = script.onerror = null;
-                onLoad(path);
-            };
-
-        head.insertBefore(script, head.lastChild);
-    }
-);
-
-});
-
-/* end: ../../libs/bem-core/common.blocks/loader/_type/loader_type_js.js */
 /* begin: ../../libs/bem-core/common.blocks/jquery/__config/jquery__config.js */
 /**
  * @module jquery__config
@@ -5241,17 +5180,69 @@ $(function() {
 });
 
 /* end: ../../libs/bem-core/common.blocks/i-bem/__dom/_init/i-bem__dom_init_auto.js */
-/* begin: ../../desktop.blocks/page/page.browser.js */
-/* global modules:false */
+/* begin: ../../libs/bem-core/common.blocks/loader/_type/loader_type_js.js */
+/**
+ * @module loader_type_js
+ * @description Load JS from external URL.
+ */
 
-modules.define('page', function(provide) {
+modules.define('loader_type_js', function(provide) {
 
-provide();
+var loading = {},
+    loaded = {},
+    head = document.getElementsByTagName('head')[0],
+    onLoad = function(path) {
+        loaded[path] = true;
+        var cbs = loading[path], cb, i = 0;
+        delete loading[path];
+        while(cb = cbs[i++]) {
+            cb();
+        }
+    };
+
+provide(
+    /**
+     * @exports
+     * @param {String} path resource link
+     * @param {Function} callback executes when resource is loaded
+     */
+    function(path, cb) {
+        if(loaded[path]) {
+            cb();
+            return;
+        }
+
+        if(loading[path]) {
+            loading[path].push(cb);
+            return;
+        }
+
+        loading[path] = [cb];
+
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.charset = 'utf-8';
+        script.src = (location.protocol === 'file:' && !path.indexOf('//')? 'http:' : '') + path;
+        script.onreadystatechange === null?
+            script.onreadystatechange = function() {
+                var readyState = this.readyState;
+                if(readyState === 'loaded' || readyState === 'complete') {
+                    script.onreadystatechange = null;
+                    onLoad(path);
+                }
+            } :
+            script.onload = script.onerror = function() {
+                script.onload = script.onerror = null;
+                onLoad(path);
+            };
+
+        head.insertBefore(script, head.lastChild);
+    }
+);
 
 });
 
-
-/* end: ../../desktop.blocks/page/page.browser.js */
+/* end: ../../libs/bem-core/common.blocks/loader/_type/loader_type_js.js */
 /* begin: ../../desktop.blocks/header/header.browser.js */
 /* global modules:false */
 
@@ -5472,3 +5463,14 @@ provide();
 
 
 /* end: ../../desktop.blocks/footer/footer.browser.js */
+/* begin: ../../desktop.blocks/page/page.browser.js */
+/* global modules:false */
+
+modules.define('page', function(provide) {
+
+provide();
+
+});
+
+
+/* end: ../../desktop.blocks/page/page.browser.js */
