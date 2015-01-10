@@ -9,18 +9,10 @@ var enbBemTechs = require('enb-bem-techs');
 
 var tech = {
     // essential
-    // levels: require('enb-bem/techs/levels'),
     fileProvider: require('enb/techs/file-provider'),
     fileCopy: require('enb/techs/file-copy'),
-    // bemdeclFromBemjson: require('enb-bem/techs/bemdecl-from-bemjson'),
-
-    // deps
-    // deps: require('enb-bem/techs/deps-old'),
-    depsProvider:  require('enb/techs/deps-provider'),
-    // depsMerge: require('enb/techs/deps-merge'),
 
     // files: require('enb-bem/techs/files'),
-    // bemdeclFromDepsByTech: require('enb-bem/techs/bemdecl-from-deps-by-tech'),
     fileMerge: require('enb/techs/file-merge'),
 
     // optimization
@@ -53,25 +45,6 @@ if (!fs.existsSync('desktop.bundles/merged')) {
 module.exports = function(config) {
     config.nodes('*.bundles/*', function(nodeConfig) {
 
-        // var addTechs = [
-        //     [enbBemTechs.levels, { levels: getLevels(config) }],
-        //     [tech.fileProvider, { target: '?.bemjson.js' }],
-        //     [enbBemTechs.bemjsonToBemdecl],
-        //     [enbBemTechs.files],
-        //     [tech.cssStylus, { target: '?.noprefix.css' }],
-        //         [tech.cssAutoprefixer, {
-        //             sourceTarget: '?.noprefix.css',
-        //             destTarget: '?.css',
-        //             browserSupport: getBrowsers()
-        //         }],
-        //     [tech.bemtree, { devMode: process.env.YENV === 'development' }],
-        //     [tech.bemhtml, { devMode: process.env.YENV === 'development' }],
-        //     [tech.bemdeclFromDepsByTech, {
-        //             target: '?.bemhtml.bemdecl.js',
-        //             sourceTech: 'js',
-        //             destTech: 'bemhtml'
-        //         }],
-        // ],
         var addTechs = [
                 // essential (begin)
                 // config levels
